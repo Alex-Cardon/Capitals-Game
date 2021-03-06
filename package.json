@@ -1,0 +1,29 @@
+{
+  "name": "Capitals-Game",
+  "version": "1.0.0",
+  "description": "Jeu des capitales",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Cardon/Capitals-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Cardon/Capitals-Game/issues"
+  },
+  "homepage": "https://github.com/Alex-Cardon/Capitals-Game#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  }
+}
