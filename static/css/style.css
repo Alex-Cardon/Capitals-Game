@@ -1,0 +1,104 @@
+body {
+    background-color: #ccc;
+
+    height : 100vh;
+    background-image: url('../images/world-140304_1920.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header, .footer {
+    padding: 20px;
+    font-size: 1.5em;  
+    text-align: center;
+    background-color: rgba(207, 225, 245, 0.459);
+    height: 100px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around; 
+}
+
+main {
+    align-self: center;
+    width: 30%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(207, 225, 245, 0.459);
+    padding: 2em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    
+    animation: slideLtR 1s 0s 1 ease;
+    
+    text-align: center;
+}
+
+
+
+.rules, .main-text {
+    color : rgb(255, 255, 255);    
+    font-size: 1.5em;
+    line-height: 50px;
+}
+
+.link-game:link {
+    text-decoration: none;
+    background-color: #ccc;
+    padding: 5px 20px 5px 20px;
+    border: 5px;
+    box-shadow: 5px 5px 5px black ;
+    border-radius: 5px;
+}
+
+.link-game{
+    transition: 0.4s;
+    color: #0004fa;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.link-game:hover {
+    background-color: #ffffff;
+    color: #fc634f;
+    padding: 5px 30px 5px 30px;
+    transition: padding 0.35s, color 0.35s;
+  }
+  
+/* nav ul li {
+    display: inline;
+    margin-right: 1em;
+
+} */
+
+
+   
+
+
+
+
+
+@keyframes slideLtR {
+    0% {
+      transform: translateX(-500%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes slideRtL {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    0% {
+      transform: translateX(500%);
+      opacity: 0;
+    }
+  }
