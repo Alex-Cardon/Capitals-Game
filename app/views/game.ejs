@@ -1,13 +1,10 @@
 <%- include('partials/header') %>
 
-<div>
-    <p class="rules">
-        En construction
-    </p>
-    <p class="main-text">
-        En construction
-    </p>
-    <a href="#" class="link-game">En construction</a>
-</div>
+ <form action="/search/level" method="get">
+    <label for="answer">Nom du pays</label>
+    <input type="text" name="answer" id="answer">
+  
+    <button type="submit">Envoie de la reponse</button>    
+  </form>
 
 <%- include('partials/footer') %>
