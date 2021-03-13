@@ -4,13 +4,15 @@
   <div class="game-board">
     <p class="country-title"> Pays : </p>
     <p class="country-name"><%=country.name%></p>
+    <% if(locals.answer) { %>
+      <p><%=answer%></p>
+   <% } %> 
     
-    <form action="/search" method="get">
+    <form action="/game/test" method="get">
       <label for="answer"></label>
       <input type="text" name="answer" id="answer" autofocus >
-      
-      <!-- <button type="submit">Envoie de la reponse</button>     -->
     </form>
+
   </div>
 
 <%- include('partials/footer') %>

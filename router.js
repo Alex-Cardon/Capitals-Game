@@ -9,7 +9,7 @@ router.get('/', mainController.home);
 
 router.get('/game', gameController.game);
 
-
+router.get('/game/test', gameController.gameTest);
 
 
 module.exports = router;
