@@ -5,6 +5,7 @@ const express = require('express');
 
 const app = express();
 
+const router = require('./router');
 
 app.set('view engine', 'ejs');
 
@@ -12,7 +13,19 @@ app.set('views', './app/views');
 
 app.use(express.static('./app/static'));
 
-const router = require('./router');
+const session = require('express-session');
+app.use(session({
+  secret: process.env.SECRET_SESSION,
+  resave:true,
+  saveUninitialized:true
+}));
+
+app.use((request, response, next) => {
+  if(!request.session.gameArry) request.session.gameArray = [];
+  next();
+})
+
+
 
 //app.use((req, res, next) => {
     // si la réponse envoyée par l'utilisateur est = à la capitale de l'obj country (country.capital)

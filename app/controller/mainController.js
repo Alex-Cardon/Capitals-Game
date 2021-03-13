@@ -1,4 +1,5 @@
 exports.home = (req, res) => {
+    req.session.gameArray = [];
     res.render('index');
 }
 

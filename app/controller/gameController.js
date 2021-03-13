@@ -1,32 +1,26 @@
 const dataMapper = require('../dataMapper')
 
-exports.game = (req, res) => {
-    //si le user a entré une réponse
-    if (req.query.answer) {
-        const userAnswer = req.query.answer.toLowerCase();
-        // alors on la compare
-        if (userAnswer === country.capital) {
-            //si le result est ok 
-            //alors on affiche correct
-            console.log(userAnswer, 'Correct');
-            //sinon on affiche faux
-        } else {
-            console.log('Faux');
-        }
-    }
-    //ensuite après 2 sec 
-    //on relance la query
-    dataMapper.getCountryName((error, country) => {
-        if (error) console.log(error);
-        else {
-            foo = function(){
-            res.render('game', {country});
+exports.gameInit = (req, res) => {
+    const checkGameArray = req.session.gameArray[0].length;
+    console.log(checkGameArray);
+    if (checkGameArray !=10) {
+        dataMapper.getCountryName((error, country) => {
+            if (error) res.status(500).send("Erreur serveur !");
+            else {
+                req.session.gameArray.push(country)
+                console.log(req.session.gameArray)
+                res.render('game', {
+                    gameArr: req.session.gameArray
+                });
             }
-        }
-    });
-    
-    setTimeout(foo, 2000);
+        });
+    } else {
+        res.render('game', {
+            gameArr: req.session.gameArray
+        });
+    };
 }
+
 
 // if(req.query.answer) {
 //     const userAnswer = req.query.answer.toLowerCase();
