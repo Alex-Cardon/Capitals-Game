@@ -20,6 +20,7 @@ body {
 }
 
 main {
+    height: 50%;
     align-self: center;
     width: 30%;
     display:flex;
@@ -67,6 +68,34 @@ main {
     padding: 5px 30px 5px 30px;
     transition: padding 0.35s, color 0.35s;
   }
+
+.game-board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.country-title {
+  color : rgb(255, 255, 255);    
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.country-name {
+  color : rgb(255, 255, 255);    
+    font-size: 2.1em;
+    line-height: 50px;
+}
+
+#answer {
+  height: 50px;
+  font-size: 1.5em;
+  text-align: center;
+}
   
 /* nav ul li {
     display: inline;
