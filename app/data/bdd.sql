@@ -1,628 +1,406 @@
-<<<<<<< HEAD
 DROP TABLE IF EXISTS "capitals";
 
-DROP TABLE IF EXISTS "pays";
+DROP TABLE IF EXISTS "country";
 
-CREATE TABLE "pays" (
+CREATE TABLE "country" (
     "id" SERIAL PRIMARY KEY,
-    "name" TEXT 
-);
-=======
-DROP TABLE IF EXISTS "pays";
-DROP TABLE IF EXISTS "capitale";
-
-CREATE TABLE IF NOT EXISTS "pays" (
-    "id" SERIAL PRIMARY KEY,
-    "name" TEXT UNIQUE);
->>>>>>> 4c34cd4637933b015ccd4daa2ab44a866fd2ab05
-
-INSERT INTO pays (name)  VALUES 
- ('Afghanistan'),
- ('Afrique du Sud'),
- ('Albanie'),
- ('Algérie'),
- ('Allemagne'),
- ('Andorre'),
- ('Angola'),
- ('Antigua-et-Barbuda'),
- ('Arabie saoudite'),
- ('Argentine'),
- ('Arménie'),
- ('Australie'),
- ('Autriche'),
- ('Azerbaïdjan'),
- ('Bahamas'),
- ('Bahreïn'),
- ('Bangladesh'),
- ('Barbade'),
- ('Belgique'),
- ('Bélize'),
- ('Bénin'),
- ('Bhoutan'),
- ('Biélorussie'),
- ('Birmanie'),
- ('Bolivie'),
- ('Bosnie-Herzégovine'),
- ('Botswana'),
- ('Brésil'),
- ('Brunei'),
- ('Bulgarie'),
- ('Burkina'),
- ('Burundi'),
- ('Cambodge'),
- ('Cameroun'),
- ('Canada'),
- ('Cap-Vert'),
- ('Centrafrique'),
- ('Chili'),
- ('Chine'),
- ('Chypre'),
- ('Colombie'),
- ('Comores'),
- ('Congo'),
- ('République démocratique du Congo'),
- ('Îles Cook'),
- ('Corée du Nord'),
- ('Corée du Sud'),
- ('Costa Rica'),
- ('Côte d''Ivoire'),
- ('Croatie'),
- ('Cuba'),
- ('Danemark'),
- ('Djibouti'),
- ('République dominicaine'),
- ('Dominique'),
- ('Égypte'),
- ('Émirats arabes unis'),
- ('Équateur'),
- ('Érythrée'),
- ('Espagne'),
- ('Estonie'),
- ('Eswatini'),
- ('États-Unis'),
- ('Éthiopie'),
- ('Fidji'),
- ('Finlande'),
- ('France'),
- ('Gabon'),
- ('Gambie'),
- ('Géorgie'),
- ('Ghana'),
- ('Grèce'),
- ('Grenade'),
- ('Guatémala'),
- ('Guinée'),
- ('Guinée équatoriale'),
- ('Guinée-Bissao'),
- ('Guyana'),
- ('Haïti'),
- ('Honduras'),
- ('Hongrie'),
- ('Inde'),
- ('Indonésie'),
- ('Irak'),
- ('Iran'),
- ('Irlande'),
- ('Islande'),
- ('Israël'),
- ('Italie'),
- ('Jamaïque'),
- ('Japon'),
- ('Jordanie'),
- ('Kazakhstan'),
- ('Kénya'),
- ('Kirghizstan'),
- ('Kiribati'),
- ('Kosovo'),
- ('Koweït'),
- ('Laos'),
- ('Lésotho'),
- ('Lettonie'),
- ('Liban'),
- ('Libéria'),
- ('Libye'),
- ('Liechtenstein'),
- ('Lituanie'),
- ('Luxembourg'),
- ('Macédoine du Nord'),
- ('Madagascar'),
- ('Malaisie'),
- ('Malawi'),
- ('Maldives'),
- ('Mali'),
- ('Malte'),
- ('Maroc'),
- ('Îles Marshall'),
- ('Maurice'),
- ('Mauritanie'),
- ('Mexique'),
- ('Micronésie'),
- ('Moldavie'),
- ('Monaco'),
- ('Mongolie'),
- ('Monténégro'),
- ('Mozambique'),
- ('Namibie'),
- ('Nauru'),
- ('Népal'),
- ('Nicaragua'),
- ('Niger'),
- ('Nigéria'),
- ('Niue'),
- ('Norvège'),
- ('Nouvelle-Zélande'),
- ('Oman'),
- ('Ouganda'),
- ('Ouzbékistan'),
- ('Pakistan'),
- ('Palaos'),
- ('Panama'),
- ('Papouasie-Nouvelle-Guinée'),
- ('Paraguay'),
- ('Pays-Bas'),
- ('Pérou'),
- ('Philippines'),
- ('Pologne'),
- ('Portugal'),
- ('Qatar'),
- ('Roumanie'),
- ('Royaume-Uni'),
- ('Russie'),
- ('Rwanda'),
- ('Saint-Christophe-et-Niévès'),
- ('Sainte-Lucie'),
- ('Saint-Marin'),
- ('Saint-Vincent-et-les-Grenadines'),
- ('Salomon'),
- ('Salvador'),
- ('Samoa'),
- ('Sao Tomé-et-Principe'),
- ('Sénégal'),
- ('Serbie'),
- ('Seychelles'),
- ('Sierra Leone'),
- ('Singapour'),
- ('Slovaquie'),
- ('Slovénie'),
- ('Somalie'),
- ('Soudan'),
- ('Soudan du Sud'),
- ('Sri Lanka'),
- ('Suède'),
- ('Suisse'),
- ('Suriname'),
- ('Syrie'),
- ('Tadjikistan'),
- ('Tanzanie'),
- ('Tchad'),
- ('Tchéquie'),
- ('Thaïlande'),
- ('Timor oriental'),
- ('Togo'),
- ('Tonga'),
- ('Trinité-et-Tobago'),
- ('Tunisie'),
- ('Turkménistan'),
- ('Turquie'),
- ('Tuvalu'),
- ('Ukraine'),
- ('Uruguay'),
- ('Vanuatu'),
- ('Vatican'),
- ('Vénézuéla'),
- ('Vietnam'),
- ('Yémen'),
- ('Zambie'),
- ('Zimbabwé');
-
-
-
-CREATE TABLE "capitals" (
-    "id" SERIAL PRIMARY KEY,
-<<<<<<< HEAD
-    "name" TEXT,
-    "pays_id" SERIAL REFERENCES "pays"("id")
+    "name" TEXT ,
+    "capital" TEXT
 );
 
-INSERT INTO "capitals" (id, name, pays_id) VALUES 
-(DEFAULT, 'Kaboul', DEFAULT),
-(DEFAULT, 'Prétoria', DEFAULT),
-(DEFAULT, 'Tirana', DEFAULT),
-(DEFAULT, 'Alger', DEFAULT),
-(DEFAULT, 'Berlin', DEFAULT),
-(DEFAULT, 'Andorre-la-Vieille', DEFAULT),
-(DEFAULT, 'Luanda', DEFAULT),
-(DEFAULT, 'Saint John''s', DEFAULT),
-(DEFAULT, 'Riyad', DEFAULT),
-(DEFAULT, 'Buenos Aires', DEFAULT),
-(DEFAULT, 'Erevan', DEFAULT),
-(DEFAULT, 'Canberra', DEFAULT),
-(DEFAULT, 'Vienne', DEFAULT),
-(DEFAULT, 'Bakou', DEFAULT),
-(DEFAULT, 'Nassau', DEFAULT),
-(DEFAULT, 'Manama', DEFAULT),
-(DEFAULT, 'Dacca', DEFAULT),
-(DEFAULT, 'Bridgetown', DEFAULT),
-(DEFAULT, 'Bruxelles', DEFAULT),
-(DEFAULT, 'Belmopan', DEFAULT),
-(DEFAULT, 'Porto-Novo', DEFAULT),
-(DEFAULT, 'Thimphou', DEFAULT),
-(DEFAULT, 'Minsk', DEFAULT),
-(DEFAULT, 'Naypyidaw', DEFAULT),
-(DEFAULT, 'La Paz', DEFAULT),
-(DEFAULT, 'Sarajevo', DEFAULT),
-(DEFAULT, 'Gaborone', DEFAULT),
-(DEFAULT, 'Brasilia', DEFAULT),
-(DEFAULT, 'Bandar Seri Begawan', DEFAULT),
-(DEFAULT, 'Sofia', DEFAULT),
-(DEFAULT, 'Ouagadougou', DEFAULT),
-(DEFAULT, 'Gitega', DEFAULT),
-(DEFAULT, 'Phnom Penh', DEFAULT),
-(DEFAULT, 'Yaoundé', DEFAULT),
-(DEFAULT, 'Ottawa', DEFAULT),
-(DEFAULT, 'Praia', DEFAULT),
-(DEFAULT, 'Bangui', DEFAULT),
-(DEFAULT, 'Santiago', DEFAULT),
-(DEFAULT, 'Pékin', DEFAULT),
-(DEFAULT, 'Nicosie', DEFAULT),
-(DEFAULT, 'Bogota', DEFAULT),
-(DEFAULT, 'Moroni', DEFAULT),
-(DEFAULT, 'Brazzaville', DEFAULT),
-(DEFAULT, 'Kinshasa', DEFAULT),
-(DEFAULT, 'Avarua', DEFAULT),
-(DEFAULT, 'Pyongyang', DEFAULT),
-(DEFAULT, 'Séoul', DEFAULT),
-(DEFAULT, 'San José', DEFAULT),
-(DEFAULT, 'Yamoussoukro', DEFAULT),
-(DEFAULT, 'Zagreb', DEFAULT),
-(DEFAULT, 'La Havane', DEFAULT),
-(DEFAULT, 'Copenhague', DEFAULT),
-(DEFAULT, 'Djibouti', DEFAULT),
-(DEFAULT, 'Saint-Domingue', DEFAULT),
-(DEFAULT, 'Roseau', DEFAULT),
-(DEFAULT, 'Le Caire', DEFAULT),
-(DEFAULT, 'Abou Dabi', DEFAULT),
-(DEFAULT, 'Quito', DEFAULT),
-(DEFAULT, 'Asmara', DEFAULT),
-(DEFAULT, 'Madrid', DEFAULT),
-(DEFAULT, 'Tallinn', DEFAULT),
-(DEFAULT, 'Mbabané', DEFAULT),
-(DEFAULT, 'Washington', DEFAULT),
-(DEFAULT, 'Addis Abeba', DEFAULT),
-(DEFAULT, 'Suva', DEFAULT),
-(DEFAULT, 'Helsinki', DEFAULT),
-(DEFAULT, 'Paris', DEFAULT),
-(DEFAULT, 'Libreville', DEFAULT),
-(DEFAULT, 'Banjul', DEFAULT),
-(DEFAULT, 'Tbilissi', DEFAULT),
-(DEFAULT, 'Accra', DEFAULT),
-(DEFAULT, 'Athènes', DEFAULT),
-(DEFAULT, 'Saint-Georges', DEFAULT),
-(DEFAULT, 'Guatémala', DEFAULT),
-(DEFAULT, 'Conakry', DEFAULT),
-(DEFAULT, 'Malabo', DEFAULT),
-(DEFAULT, 'Bissao', DEFAULT),
-(DEFAULT, 'Georgetown', DEFAULT),
-(DEFAULT, 'Port-au-Prince', DEFAULT),
-(DEFAULT, 'Tégucigalpa', DEFAULT),
-(DEFAULT, 'Budapest', DEFAULT),
-(DEFAULT, 'New Delhi', DEFAULT),
-(DEFAULT, 'Jakarta', DEFAULT),
-(DEFAULT, 'Bagdad', DEFAULT),
-(DEFAULT, 'Téhéran', DEFAULT),
-(DEFAULT, 'Dublin', DEFAULT),
-(DEFAULT, 'Reykjavik', DEFAULT),
-(DEFAULT, 'Israel', DEFAULT),
-(DEFAULT, 'Rome', DEFAULT),
-(DEFAULT, 'Kingston', DEFAULT),
-(DEFAULT, 'Tokyo', DEFAULT),
-(DEFAULT, 'Amman', DEFAULT),
-(DEFAULT, 'Nour-Soultan', DEFAULT),
-(DEFAULT, 'Nairobi', DEFAULT),
-(DEFAULT, 'Bichkek', DEFAULT),
-(DEFAULT, 'Bairiki', DEFAULT),
-(DEFAULT, 'Pristina', DEFAULT),
-(DEFAULT, 'Koweït', DEFAULT),
-(DEFAULT, 'Vientiane', DEFAULT),
-(DEFAULT, 'Maséru', DEFAULT),
-(DEFAULT, 'Riga', DEFAULT),
-(DEFAULT, 'Beyrouth', DEFAULT),
-(DEFAULT, 'Monrovia', DEFAULT),
-(DEFAULT, 'Tripoli', DEFAULT),
-(DEFAULT, 'Vaduz', DEFAULT),
-(DEFAULT, 'Vilnius', DEFAULT),
-(DEFAULT, 'Luxembourg', DEFAULT),
-(DEFAULT, 'Skopje', DEFAULT),
-(DEFAULT, 'Antananarivo ', DEFAULT),
-(DEFAULT, 'Kuala Lumpur', DEFAULT),
-(DEFAULT, 'Lilongwé', DEFAULT),
-(DEFAULT, 'Malé', DEFAULT),
-(DEFAULT, 'Bamako', DEFAULT),
-(DEFAULT, 'La Valette', DEFAULT),
-(DEFAULT, 'Rabat', DEFAULT),
-(DEFAULT, 'Delap-Uliga-Darrit', DEFAULT),
-(DEFAULT, 'Port-Louis', DEFAULT),
-(DEFAULT, 'Nouakchott', DEFAULT),
-(DEFAULT, 'Mexico', DEFAULT),
-(DEFAULT, 'Palikir', DEFAULT),
-(DEFAULT, 'Chisinau', DEFAULT),
-(DEFAULT, 'Monaco', DEFAULT),
-(DEFAULT, 'Oulan-Bator', DEFAULT),
-(DEFAULT, 'Podgorica', DEFAULT),
-(DEFAULT, 'Maputo', DEFAULT),
-(DEFAULT, 'Windhoek', DEFAULT),
-(DEFAULT, 'Yaren', DEFAULT),
-(DEFAULT, 'Katmandou', DEFAULT),
-(DEFAULT, 'Managua', DEFAULT),
-(DEFAULT, 'Niamey', DEFAULT),
-(DEFAULT, 'Abuja', DEFAULT),
-(DEFAULT, 'Alofi', DEFAULT),
-(DEFAULT, 'Oslo', DEFAULT),
-(DEFAULT, 'Wellington', DEFAULT),
-(DEFAULT, 'Mascate', DEFAULT),
-(DEFAULT, 'Kampala', DEFAULT),
-(DEFAULT, 'Tachkent', DEFAULT),
-(DEFAULT, 'Islamabad', DEFAULT),
-(DEFAULT, 'Melekeok', DEFAULT),
-(DEFAULT, 'Panama', DEFAULT),
-(DEFAULT, 'Port Moresby', DEFAULT),
-(DEFAULT, 'Assomption ', DEFAULT),
-(DEFAULT, 'Amsterdam', DEFAULT),
-(DEFAULT, 'Lima', DEFAULT),
-(DEFAULT, 'Manille', DEFAULT),
-(DEFAULT, 'Varsovie', DEFAULT),
-(DEFAULT, 'Lisbonne', DEFAULT),
-(DEFAULT, 'Doha', DEFAULT),
-(DEFAULT, 'Bucarest', DEFAULT),
-(DEFAULT, 'Londres', DEFAULT),
-(DEFAULT, 'Moscou', DEFAULT),
-(DEFAULT, 'Kigali', DEFAULT),
-(DEFAULT, 'Basseterre', DEFAULT),
-(DEFAULT, 'Castries', DEFAULT),
-(DEFAULT, 'Saint-Marin', DEFAULT),
-(DEFAULT, 'Kingstown', DEFAULT),
-(DEFAULT, 'Honiara', DEFAULT),
-(DEFAULT, 'San Salvador', DEFAULT),
-(DEFAULT, 'Apia', DEFAULT),
-(DEFAULT, 'Sao Tomé', DEFAULT),
-(DEFAULT, 'Dakar', DEFAULT),
-(DEFAULT, 'Belgrade', DEFAULT),
-(DEFAULT, 'Victoria', DEFAULT),
-(DEFAULT, 'Freetown', DEFAULT),
-(DEFAULT, 'Singapour', DEFAULT),
-(DEFAULT, 'Bratislava', DEFAULT),
-(DEFAULT, 'Ljubljana', DEFAULT),
-(DEFAULT, 'Mogadiscio', DEFAULT),
-(DEFAULT, 'Khartoum', DEFAULT),
-(DEFAULT, 'Djouba', DEFAULT),
-(DEFAULT, 'Sri Jayewardenepura-Kotte', DEFAULT),
-(DEFAULT, 'Stockholm', DEFAULT),
-(DEFAULT, 'Berne', DEFAULT),
-(DEFAULT, 'Paramaribo', DEFAULT),
-(DEFAULT, 'Damas', DEFAULT),
-(DEFAULT, 'Douchanbé', DEFAULT),
-(DEFAULT, 'Dodoma', DEFAULT),
-(DEFAULT, 'Ndjamena', DEFAULT),
-(DEFAULT, 'Prague', DEFAULT),
-(DEFAULT, 'Bangkok', DEFAULT),
-(DEFAULT, 'Dili', DEFAULT),
-(DEFAULT, 'Lomé', DEFAULT),
-(DEFAULT, 'Nuku alofa', DEFAULT),
-(DEFAULT, 'Port-d''Espagne', DEFAULT),
-(DEFAULT, 'Tunis', DEFAULT),
-(DEFAULT, 'Achgabat', DEFAULT),
-(DEFAULT, 'Ankara', DEFAULT),
-(DEFAULT, 'Vaiaku', DEFAULT),
-(DEFAULT, 'Kiev', DEFAULT),
-(DEFAULT, 'Montévidéo', DEFAULT),
-(DEFAULT, 'Port-Vila', DEFAULT),
-(DEFAULT, 'Vatican', DEFAULT),
-(DEFAULT, 'Caracas', DEFAULT),
-(DEFAULT, 'Hanoï', DEFAULT),
-(DEFAULT, 'Sanaa', DEFAULT),
-(DEFAULT, 'Lusaka', DEFAULT),
-(DEFAULT, 'Hararé', DEFAULT);
-=======
-    "name" TEXT UNIQUE,
-    FOREIGN KEY ("pays_id") REFERENCES "pays"("id")
-);
+INSERT INTO country (name, capital)  VALUES 
+ ('Afghanistan', 'Kaboul'),
+ ('Afrique du Sud', 'Prétoria'),
+ ('Albanie', 'Tirana'),
+ ('Algérie', 'Alger'),
+ ('Allemagne', 'Berlin'),
+ ('Andorre', 'Andorre-la-Vieille'),
+ ('Angola', 'Luanda'),
+ ('Antigua-et-Barbuda', 'Saint John''s'),
+ ('Arabie saoudite', 'Riyad'),
+ ('Argentine', 'Buenos Aires'),
+ ('Arménie', 'Erevan'),
+ ('Australie', 'Canberra'),
+ ('Autriche', 'Vienne'),
+ ('Azerbaïdjan', 'Bakou'),
+ ('Bahamas', 'Nassau'),
+ ('Bahreïn', 'Manama'),
+ ('Bangladesh', 'Dacca'),
+ ('Barbade', 'Bridgetown'),
+ ('Belgique', 'Bruxelles'),
+ ('Bélize', 'Belmopan'),
+ ('Bénin', 'Porto-Novo'),
+ ('Bhoutan', 'Thimphou'),
+ ('Biélorussie', 'Minsk'),
+ ('Birmanie', 'Naypyidaw'),
+ ('Bolivie', 'La Paz'),
+ ('Bosnie-Herzégovine', 'Sarajevo'),
+ ('Botswana', 'Gaborone'),
+ ('Brésil', 'Brasilia'),
+ ('Brunei', 'Bandar Seri Begawan'),
+ ('Bulgarie', 'Sofia'),
+ ('Burkina', 'Ouagadougou'),
+ ('Burundi', 'Gitega'),
+ ('Cambodge', 'Phnom Penh'),
+ ('Cameroun', 'Yaoundé'),
+ ('Canada', 'Ottawa'),
+ ('Cap-Vert', 'Praia'),
+ ('Centrafrique', 'Bangui'),
+ ('Chili', 'Santiago'),
+ ('Chine', 'Pékin'),
+ ('Chypre', 'Nicosie'),
+ ('Colombie', 'Bogota'),
+ ('Comores', 'Moroni'),
+ ('Congo', 'Brazzaville'),
+ ('République démocratique du Congo', 'Kinshasa'),
+ ('Îles Cook', 'Avarua'),
+ ('Corée du Nord', 'Pyongyang'),
+ ('Corée du Sud', 'Séoul'),
+ ('Costa Rica', 'San José'),
+ ('Côte d''Ivoire', 'Yamoussoukro'),
+ ('Croatie', 'Zagreb'),
+ ('Cuba', 'La Havane'),
+ ('Danemark', 'Copenhague'),
+ ('Djibouti', 'Djibouti'),
+ ('République dominicaine', 'Saint-Domingue'),
+ ('Dominique', 'Roseau'),
+ ('Égypte', 'Le Caire'),
+ ('Émirats arabes unis', 'Abou Dabi'),
+ ('Équateur', 'Quito'),
+ ('Érythrée', 'Asmara'),
+ ('Espagne', 'Madrid'),
+ ('Estonie', 'Tallinn'),
+ ('Eswatini', 'Mbabané'),
+ ('États-Unis', 'Washington'),
+ ('Éthiopie', 'Addis Abeba'),
+ ('Fidji', 'Suva'),
+ ('Finlande', 'Helsinki'),
+ ('France', 'Paris'),
+ ('Gabon', 'Libreville'),
+ ('Gambie', 'Banjul'),
+ ('Géorgie', 'Tbilissi'),
+ ('Ghana', 'Accra'),
+ ('Grèce', 'Athènes'),
+ ('Grenade', 'Saint-Georges'),
+ ('Guatémala', 'Guatémala'),
+ ('Guinée', 'Conakry'),
+ ('Guinée équatoriale', 'Malabo'),
+ ('Guinée-Bissao', 'Bissao'),
+ ('Guyana', 'Georgetown'),
+ ('Haïti', 'Port-au-Prince'),
+ ('Honduras', 'Tégucigalpa'),
+ ('Hongrie', 'Budapest'),
+ ('Inde', 'New Delhi'),
+ ('Indonésie', 'Jakarta'),
+ ('Irak', 'Bagdad'),
+ ('Iran', 'Téhéran'),
+ ('Irlande', 'Dublin'),
+ ('Islande', 'Reykjavik'),
+ ('Israël', 'Israel'),
+ ('Italie', 'Rome'),
+ ('Jamaïque', 'Kingston'),
+ ('Japon', 'Tokyo'),
+ ('Jordanie', 'Amman'),
+ ('Kazakhstan', 'Nour-Soultan'),
+ ('Kénya', 'Nairobi'),
+ ('Kirghizstan', 'Bichkek'),
+ ('Kiribati', 'Bairiki'),
+ ('Kosovo', 'Pristina'),
+ ('Koweït', 'Koweït'),
+ ('Laos', 'Vientiane'),
+ ('Lésotho', 'Maséru'),
+ ('Lettonie', 'Riga'),
+ ('Liban', 'Beyrouth'),
+ ('Libéria', 'Monrovia'),
+ ('Libye', 'Tripoli'),
+ ('Liechtenstein', 'Vaduz'),
+ ('Lituanie', 'Vilnius'),
+ ('Luxembourg', 'Luxembourg'),
+ ('Macédoine du Nord', 'Skopje'),
+ ('Madagascar', 'Antananarivo '),
+ ('Malaisie', 'Kuala Lumpur'),
+ ('Malawi', 'Lilongwé'),
+ ('Maldives', 'Malé'),
+ ('Mali', 'Bamako'),
+ ('Malte', 'La Valette'),
+ ('Maroc', 'Rabat'),
+ ('Îles Marshall', 'Delap-Uliga-Darrit'),
+ ('Maurice', 'Port-Louis'),
+ ('Mauritanie', 'Nouakchott'),
+ ('Mexique', 'Mexico'),
+ ('Micronésie', 'Palikir'),
+ ('Moldavie', 'Chisinau'),
+ ('Monaco', 'Monaco'),
+ ('Mongolie', 'Oulan-Bator'),
+ ('Monténégro', 'Podgorica'),
+ ('Mozambique', 'Maputo'),
+ ('Namibie', 'Windhoek'),
+ ('Nauru', 'Yaren'),
+ ('Népal', 'Katmandou'),
+ ('Nicaragua', 'Managua'),
+ ('Niger', 'Niamey'),
+ ('Nigéria', 'Abuja'),
+ ('Niue', 'Alofi'),
+ ('Norvège', 'Oslo'),
+ ('Nouvelle-Zélande', 'Wellington'),
+ ('Oman', 'Mascate'),
+ ('Ouganda', 'Kampala'),
+ ('Ouzbékistan', 'Tachkent'),
+ ('Pakistan', 'Islamabad'),
+ ('Palaos', 'Melekeok'),
+ ('Panama', 'Panama'),
+ ('Papouasie-Nouvelle-Guinée', 'Port Moresby'),
+ ('Paraguay', 'Assomption '),
+ ('Pays-Bas', 'Amsterdam'),
+ ('Pérou', 'Lima'),
+ ('Philippines', 'Manille'),
+ ('Pologne', 'Varsovie'),
+ ('Portugal', 'Lisbonne'),
+ ('Qatar', 'Doha'),
+ ('Roumanie', 'Bucarest'),
+ ('Royaume-Uni', 'Londres'),
+ ('Russie', 'Moscou'),
+ ('Rwanda', 'Kigali'),
+ ('Saint-Christophe-et-Niévès', 'Basseterre'),
+ ('Sainte-Lucie', 'Castries'),
+ ('Saint-Marin', 'Saint-Marin'),
+ ('Saint-Vincent-et-les-Grenadines', 'Kingstown'),
+ ('Salomon', 'Honiara'),
+ ('Salvador', 'San Salvador'),
+ ('Samoa', 'Apia'),
+ ('Sao Tomé-et-Principe', 'Sao Tomé'),
+ ('Sénégal', 'Dakar'),
+ ('Serbie', 'Belgrade'),
+ ('Seychelles', 'Victoria'),
+ ('Sierra Leone', 'Freetown'),
+ ('Singapour', 'Singapour'),
+ ('Slovaquie', 'Bratislava'),
+ ('Slovénie', 'Ljubljana'),
+ ('Somalie', 'Mogadiscio'),
+ ('Soudan', 'Khartoum'),
+ ('Soudan du Sud', 'Djouba'),
+ ('Sri Lanka', 'Sri Jayewardenepura-Kotte'),
+ ('Suède', 'Stockholm'),
+ ('Suisse', 'Berne'),
+ ('Suriname', 'Paramaribo'),
+ ('Syrie', 'Damas'),
+ ('Tadjikistan', 'Douchanbé'),
+ ('Tanzanie', 'Dodoma'),
+ ('Tchad', 'Ndjamena'),
+ ('Tchéquie', 'Prague'),
+ ('Thaïlande', 'Bangkok'),
+ ('Timor oriental', 'Dili'),
+ ('Togo', 'Lomé'),
+ ('Tonga', 'Nuku alofa'),
+ ('Trinité-et-Tobago', 'Port-d''Espagne'),
+ ('Tunisie', 'Tunis'),
+ ('Turkménistan', 'Achgabat'),
+ ('Turquie', 'Ankara'),
+ ('Tuvalu', 'Vaiaku'),
+ ('Ukraine', 'Kiev'),
+ ('Uruguay', 'Montévidéo'),
+ ('Vanuatu', 'Port-Vila'),
+ ('Vatican', 'Vatican'),
+ ('Vénézuéla', 'Caracas'),
+ ('Vietnam', 'Hanoï'),
+ ('Yémen', 'Sanaa'),
+ ('Zambie', 'Lusaka'),
+ ('Zimbabwé', 'Hararé');
 
-INSERT INTO "capitale" ("name", "pays_id") VALUES 
-(DEFAULT, "Kaboul", DEFAULT),
-(DEFAULT, "Prétoria", DEFAULT),
-(DEFAULT, "Tirana", DEFAULT),
-(DEFAULT, "Alger", DEFAULT),
-(DEFAULT, "Berlin", DEFAULT),
-(DEFAULT, "Andorre-la-Vieille", DEFAULT),
-(DEFAULT, "Luanda", DEFAULT),
-(DEFAULT, "Saint John's", DEFAULT),
-(DEFAULT, "Riyad", DEFAULT),
-(DEFAULT, "Buenos Aires", DEFAULT),
-(DEFAULT, "Erevan", DEFAULT),
-(DEFAULT, "Canberra", DEFAULT),
-(DEFAULT, "Vienne", DEFAULT),
-(DEFAULT, "Bakou", DEFAULT),
-(DEFAULT, "Nassau", DEFAULT),
-(DEFAULT, "Manama", DEFAULT),
-(DEFAULT, "Dacca", DEFAULT),
-(DEFAULT, "Bridgetown", DEFAULT),
-(DEFAULT, "Bruxelles", DEFAULT),
-(DEFAULT, "Belmopan", DEFAULT),
-(DEFAULT, "Porto-Novo", DEFAULT),
-(DEFAULT, "Thimphou", DEFAULT),
-(DEFAULT, "Minsk", DEFAULT),
-(DEFAULT, "Naypyidaw", DEFAULT),
-(DEFAULT, "Sucre / La Paz", DEFAULT),
-(DEFAULT, "Sarajevo", DEFAULT),
-(DEFAULT, "Gaborone", DEFAULT),
-(DEFAULT, "Brasilia", DEFAULT),
-(DEFAULT, "Bandar Seri Begawan", DEFAULT),
-(DEFAULT, "Sofia", DEFAULT),
-(DEFAULT, "Ouagadougou", DEFAULT),
-(DEFAULT, "Gitega", DEFAULT),
-(DEFAULT, "Phnom Penh", DEFAULT),
-(DEFAULT, "Yaoundé", DEFAULT),
-(DEFAULT, "Ottawa", DEFAULT),
-(DEFAULT, "Praia", DEFAULT),
-(DEFAULT, "Bangui", DEFAULT),
-(DEFAULT, "Santiago", DEFAULT),
-(DEFAULT, "Pékin", DEFAULT),
-(DEFAULT, "Nicosie", DEFAULT),
-(DEFAULT, "Bogota", DEFAULT),
-(DEFAULT, "Moroni", DEFAULT),
-(DEFAULT, "Brazzaville", DEFAULT),
-(DEFAULT, "Kinshasa", DEFAULT),
-(DEFAULT, "Avarua", DEFAULT),
-(DEFAULT, "Pyongyang", DEFAULT),
-(DEFAULT, "Séoul", DEFAULT),
-(DEFAULT, "San José", DEFAULT),
-(DEFAULT, "Yamoussoukro", DEFAULT),
-(DEFAULT, "Zagreb", DEFAULT),
-(DEFAULT, "La Havane", DEFAULT),
-(DEFAULT, "Copenhague", DEFAULT),
-(DEFAULT, "Djibouti", DEFAULT),
-(DEFAULT, "Saint-Domingue", DEFAULT),
-(DEFAULT, "Roseau", DEFAULT),
-(DEFAULT, "Le Caire", DEFAULT),
-(DEFAULT, "Abou Dabi", DEFAULT),
-(DEFAULT, "Quito", DEFAULT),
-(DEFAULT, "Asmara", DEFAULT),
-(DEFAULT, "Madrid", DEFAULT),
-(DEFAULT, "Tallinn", DEFAULT),
-(DEFAULT, "Mbabané", DEFAULT),
-(DEFAULT, "Washington", DEFAULT),
-(DEFAULT, "Addis Abeba", DEFAULT),
-(DEFAULT, "Suva", DEFAULT),
-(DEFAULT, "Helsinki", DEFAULT),
-(DEFAULT, "Paris", DEFAULT),
-(DEFAULT, "Libreville", DEFAULT),
-(DEFAULT, "Banjul", DEFAULT),
-(DEFAULT, "Tbilissi", DEFAULT),
-(DEFAULT, "Accra", DEFAULT),
-(DEFAULT, "Athènes", DEFAULT),
-(DEFAULT, "Saint-Georges", DEFAULT),
-(DEFAULT, "Guatémala", DEFAULT),
-(DEFAULT, "Conakry", DEFAULT),
-(DEFAULT, "Malabo", DEFAULT),
-(DEFAULT, "Bissao", DEFAULT),
-(DEFAULT, "Georgetown", DEFAULT),
-(DEFAULT, "Port-au-Prince", DEFAULT),
-(DEFAULT, "Tégucigalpa", DEFAULT),
-(DEFAULT, "Budapest", DEFAULT),
-(DEFAULT, "New Delhi", DEFAULT),
-(DEFAULT, "Jakarta", DEFAULT),
-(DEFAULT, "Bagdad", DEFAULT),
-(DEFAULT, "Téhéran", DEFAULT),
-(DEFAULT, "Dublin", DEFAULT),
-(DEFAULT, "Reykjavik", DEFAULT),
-(DEFAULT, "Israel", DEFAULT),
-(DEFAULT, "Rome", DEFAULT),
-(DEFAULT, "Kingston", DEFAULT),
-(DEFAULT, "Tokyo", DEFAULT),
-(DEFAULT, "Amman", DEFAULT),
-(DEFAULT, "Nour-Soultan", DEFAULT),
-(DEFAULT, "Nairobi", DEFAULT),
-(DEFAULT, "Bichkek", DEFAULT),
-(DEFAULT, "Bairiki", DEFAULT),
-(DEFAULT, "Pristina", DEFAULT),
-(DEFAULT, "Koweït", DEFAULT),
-(DEFAULT, "Vientiane", DEFAULT),
-(DEFAULT, "Maséru", DEFAULT),
-(DEFAULT, "Riga", DEFAULT),
-(DEFAULT, "Beyrouth", DEFAULT),
-(DEFAULT, "Monrovia", DEFAULT),
-(DEFAULT, "Tripoli", DEFAULT),
-(DEFAULT, "Vaduz", DEFAULT),
-(DEFAULT, "Vilnius", DEFAULT),
-(DEFAULT, "Luxembourg", DEFAULT),
-(DEFAULT, "Skopje", DEFAULT),
-(DEFAULT, "Antananarivo ", DEFAULT),
-(DEFAULT, "Kuala Lumpur", DEFAULT),
-(DEFAULT, "Lilongwé", DEFAULT),
-(DEFAULT, "Malé", DEFAULT),
-(DEFAULT, "Bamako", DEFAULT),
-(DEFAULT, "La Valette", DEFAULT),
-(DEFAULT, "Rabat", DEFAULT),
-(DEFAULT, "Delap-Uliga-Darrit", DEFAULT),
-(DEFAULT, "Port-Louis", DEFAULT),
-(DEFAULT, "Nouakchott", DEFAULT),
-(DEFAULT, "Mexico", DEFAULT),
-(DEFAULT, "Palikir", DEFAULT),
-(DEFAULT, "Chisinau", DEFAULT),
-(DEFAULT, "Monaco", DEFAULT),
-(DEFAULT, "Oulan-Bator", DEFAULT),
-(DEFAULT, "Podgorica", DEFAULT),
-(DEFAULT, "Maputo", DEFAULT),
-(DEFAULT, "Windhoek", DEFAULT),
-(DEFAULT, "Yaren", DEFAULT),
-(DEFAULT, "Katmandou", DEFAULT),
-(DEFAULT, "Managua", DEFAULT),
-(DEFAULT, "Niamey", DEFAULT),
-(DEFAULT, "Abuja", DEFAULT),
-(DEFAULT, "Alofi", DEFAULT),
-(DEFAULT, "Oslo", DEFAULT),
-(DEFAULT, "Wellington", DEFAULT),
-(DEFAULT, "Mascate", DEFAULT),
-(DEFAULT, "Kampala", DEFAULT),
-(DEFAULT, "Tachkent", DEFAULT),
-(DEFAULT, "Islamabad", DEFAULT),
-(DEFAULT, "Melekeok", DEFAULT),
-(DEFAULT, "Panama", DEFAULT),
-(DEFAULT, "Port Moresby", DEFAULT),
-(DEFAULT, "Assomption ", DEFAULT),
-(DEFAULT, "Amsterdam", DEFAULT),
-(DEFAULT, "Lima", DEFAULT),
-(DEFAULT, "Manille", DEFAULT),
-(DEFAULT, "Varsovie", DEFAULT),
-(DEFAULT, "Lisbonne", DEFAULT),
-(DEFAULT, "Doha", DEFAULT),
-(DEFAULT, "Bucarest", DEFAULT),
-(DEFAULT, "Londres", DEFAULT),
-(DEFAULT, "Moscou", DEFAULT),
-(DEFAULT, "Kigali", DEFAULT),
-(DEFAULT, "Basseterre", DEFAULT),
-(DEFAULT, "Castries", DEFAULT),
-(DEFAULT, "Saint-Marin", DEFAULT),
-(DEFAULT, "Kingstown", DEFAULT),
-(DEFAULT, "Honiara", DEFAULT),
-(DEFAULT, "San Salvador", DEFAULT),
-(DEFAULT, "Apia", DEFAULT),
-(DEFAULT, "Sao Tomé", DEFAULT),
-(DEFAULT, "Dakar", DEFAULT),
-(DEFAULT, "Belgrade", DEFAULT),
-(DEFAULT, "Victoria", DEFAULT),
-(DEFAULT, "Freetown", DEFAULT),
-(DEFAULT, "Singapour", DEFAULT),
-(DEFAULT, "Bratislava", DEFAULT),
-(DEFAULT, "Ljubljana", DEFAULT),
-(DEFAULT, "Mogadiscio", DEFAULT),
-(DEFAULT, "Khartoum", DEFAULT),
-(DEFAULT, "Djouba", DEFAULT),
-(DEFAULT, "Sri Jayewardenepura-Kotte", DEFAULT),
-(DEFAULT, "Stockholm", DEFAULT),
-(DEFAULT, "Berne", DEFAULT),
-(DEFAULT, "Paramaribo", DEFAULT),
-(DEFAULT, "Damas", DEFAULT),
-(DEFAULT, "Douchanbé", DEFAULT),
-(DEFAULT, "Dodoma", DEFAULT),
-(DEFAULT, "Ndjamena", DEFAULT),
-(DEFAULT, "Prague", DEFAULT),
-(DEFAULT, "Bangkok", DEFAULT),
-(DEFAULT, "Dili", DEFAULT),
-(DEFAULT, "Lomé", DEFAULT),
-(DEFAULT, "Nuku'alofa", DEFAULT),
-(DEFAULT, "Port-d'Espagne", DEFAULT),
-(DEFAULT, "Tunis", DEFAULT),
-(DEFAULT, "Achgabat", DEFAULT),
-(DEFAULT, "Ankara", DEFAULT),
-(DEFAULT, "Vaiaku", DEFAULT),
-(DEFAULT, "Kiev", DEFAULT),
-(DEFAULT, "Montévidéo", DEFAULT),
-(DEFAULT, "Port-Vila", DEFAULT),
-(DEFAULT, "Vatican", DEFAULT),
-(DEFAULT, "Caracas", DEFAULT),
-(DEFAULT, "Hanoï", DEFAULT),
-(DEFAULT, "Sanaa", DEFAULT),
-(DEFAULT, "Lusaka", DEFAULT),
-(DEFAULT, "Hararé", DEFAULT);
->>>>>>> 4c34cd4637933b015ccd4daa2ab44a866fd2ab05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,10 @@
+const dataMapper = require('../dataMapper')
+
 exports.game = (req, res) => {
-    res.render('game');
+    dataMapper.getCountryName((error, country) =>{
+        if(error)console.log(error);
+        else {
+            res.render('game', {country});
+        }
+    })
 }
