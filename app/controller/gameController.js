@@ -1,25 +1,33 @@
 const dataMapper = require('../dataMapper')
 
 exports.gameInit = (req, res) => {
-    const checkGameArray = req.session.gameArray[0].length;
-    console.log(checkGameArray);
-    if (checkGameArray !=10) {
         dataMapper.getCountryName((error, country) => {
             if (error) res.status(500).send("Erreur serveur !");
             else {
                 req.session.gameArray.push(country)
-                console.log(req.session.gameArray)
                 res.render('game', {
-                    gameArr: req.session.gameArray
+                    gameArr: req.session.gameArray[0],
+                    count : req.session.count
                 });
             }
         });
-    } else {
-        res.render('game', {
-            gameArr: req.session.gameArray
-        });
     };
-}
+
+    exports.gameTest = (req, res) => {
+       const gameArr = req.session.gameArray[0];
+       const userAnswer = req.query.answer.toLowerCase();
+       const currentCountry = gameArr[req.session.count]
+       if(currentCountry.capital.toLowerCase() === userAnswer) {
+           console.log('Correct');
+            req.session.count++;
+            res.render('game', {gameArr: req.session.gameArray[0], count: req.session.count})
+       } else {
+           console.log('faux');
+            req.session.count++;
+            res.render('game', {gameArr: req.session.gameArray[0], count: req.session.count})
+       }
+    }
+
 
 
 // if(req.query.answer) {

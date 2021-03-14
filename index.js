@@ -20,8 +20,11 @@ app.use(session({
   saveUninitialized:true
 }));
 
-app.use((request, response, next) => {
-  if(!request.session.gameArry) request.session.gameArray = [];
+app.use((req, res, next) => {
+  if(!req.session.gameArray){
+   req.session.gameArray = [];
+    req.session.count = 0;
+  }  
   next();
 })
 

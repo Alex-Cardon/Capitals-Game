@@ -7,9 +7,9 @@ const gameController = require('./app/controller/gameController');
 
 router.get('/', mainController.home);
 
-router.get('/game', gameController.game);
+router.get('/game', gameController.gameInit);
 
-router.get('/game/test', gameController.game);
+router.get('/game/test', gameController.gameTest);
 
 
 module.exports = router;
