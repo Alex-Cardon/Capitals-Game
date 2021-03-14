@@ -19,3 +19,4 @@ Jeu des capitales
 
 ## A faire
 -Trouver un maoyen de faire un seul array a la place des trouze en place
+-Ajouter le l'ombre sous les lettres pour les faire resortir
