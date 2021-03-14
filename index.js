@@ -24,6 +24,8 @@ app.use((req, res, next) => {
   if(!req.session.gameArray){
    req.session.gameArray = [];
     req.session.count = 0;
+    req.session.score = 0;
+    req.session.scoreArray = [];
   }  
   next();
 })

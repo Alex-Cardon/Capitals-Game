@@ -4,9 +4,7 @@
   <div class="game-board">
     <p class="country-title"> Pays : </p>
     <p class="country-name"><%=gameArr[count].name%></p>
-    <% if(locals.answer) { %>
-      <p><%=answer%></p>
-   <% } %> 
+   
     
     <form action="/game/test" method="get">
       <label for="answer"></label>
