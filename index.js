@@ -26,6 +26,9 @@ app.use((req, res, next) => {
     req.session.count = 0;
     req.session.score = 0;
     req.session.scoreArray = [];
+    req.session.userAnswer =[];
+    req.session.countries = [];
+    req.session.capitals = [];
   }  
   next();
 })

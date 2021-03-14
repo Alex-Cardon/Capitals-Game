@@ -4,7 +4,22 @@
   <div class="game-board">
     
   
-    <p>Votre score est de <%=score%>/10</p>
+    <p class="score">Votre score est de <%=score%>/10</p>
+
+    <div class="result">
+      <% listCountry.forEach(country => { %>
+       <p><%=country%></p>
+      <% }) %>
+      
+       <% listUserAnswer.forEach(elem => { %>
+        <p><%=elem%></p>
+       <% }) %>
+       <% listCapi.forEach(capi => { %>
+        <p><%=capi%></p>
+       <% }) %>
+    </div>
+
+    <a href="/" class="link-game">Rejouer</a>
     
 
   </div>
