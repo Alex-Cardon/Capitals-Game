@@ -17,8 +17,10 @@ exports.gameTest = (req, res) => {
 
     const gameArr = req.session.gameArray[0];
     const userAnswer = req.query.answer.toLowerCase();
-    const currentCountry = gameArr[req.session.count]
-
+    const currentCountry = gameArr[req.session.count];
+    currentCountry.user = userAnswer;
+    console.log(currentCountry)
+    console.log(gameArr)
 
     console.log(userAnswer)
 

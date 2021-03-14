@@ -26,7 +26,7 @@ main {
     display:flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgba(92, 92, 92, 0.459);
+    background-color: rgba(255, 255, 255, 0.616);
     padding: 2em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -34,6 +34,7 @@ main {
     animation: slideLtR 1s 0s 1 ease;
     
     text-align: center;
+    text-shadow: black 2px 2px 2px;
 }
 
 
@@ -50,7 +51,6 @@ main {
     background-color: #ccc;
     padding: 5px 20px 5px 20px;
     border: 5px;
-    box-shadow: 5px 5px 5px black ;
     border-radius: 5px;
 }
 
@@ -113,6 +113,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   height: 200px;
+
 }
   
 /* nav ul li {
