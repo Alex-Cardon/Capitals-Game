@@ -19,18 +19,11 @@ exports.gameTest = (req, res) => {
     const userAnswer = req.query.answer.toLowerCase();
     const currentCountry = gameArr[req.session.count];
     currentCountry.user = userAnswer;
-    console.log(currentCountry)
-    console.log(gameArr)
-
-    console.log(userAnswer)
 
     if (currentCountry.capital.toLowerCase() === userAnswer) {
         console.log('Correct');
         req.session.count++;
         req.session.score++;
-        req.session.userAnswer.push(userAnswer);
-        req.session.countries.push(currentCountry.name);
-        req.session.capitals.push(currentCountry.capital);
         if (req.session.count < 10) {
             res.render('game', {
                 gameArr: req.session.gameArray[0],
@@ -39,17 +32,12 @@ exports.gameTest = (req, res) => {
         } else {
             res.render('gamescore', {
                 score: req.session.score,
-                listUserAnswer: req.session.userAnswer,
-                listCountry: req.session.countries,
-                listCapi: req.session.capitals
+                gameArr: req.session.gameArray[0],
             })
         }
     } else {
         console.log('faux');
         req.session.count++;
-        req.session.userAnswer.push(userAnswer);
-        req.session.countries.push(currentCountry.name);
-        req.session.capitals.push(currentCountry.capital);
         if (req.session.count < 10) {
             res.render('game', {
                 gameArr: req.session.gameArray[0],
@@ -58,14 +46,8 @@ exports.gameTest = (req, res) => {
         } else {
             res.render('gamescore', {
                 score: req.session.score,
-                listUserAnswer: req.session.userAnswer,
-                listCountry: req.session.countries,
-                listCapi: req.session.capitals
+                gameArr: req.session.gameArray[0],
             })
         }
     }
-
-
-
-
 }

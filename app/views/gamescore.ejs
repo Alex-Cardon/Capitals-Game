@@ -7,20 +7,19 @@
     <p class="score">Votre score est de <%=score%>/10</p>
 
     <div class="result">
-      <% listCountry.forEach(country => { %>
-       <p><%=country%></p>
-      <% }) %>
-      
-       <% listUserAnswer.forEach(elem => { %>
-        <p><%=elem%></p>
-       <% }) %>
-       <% listCapi.forEach(capi => { %>
-        <p><%=capi%></p>
-       <% }) %>
+      <% gameArr.forEach(elem => { %>
+       <p><%=elem.name%> - <%=elem.capital%> - 
+        <% if (elem.capital.toLowerCase()===elem.user) { %>
+          <span class="ok"><%=elem.user%></span></p>
+          <% } else {%>
+            <span class="ko"><%=elem.user%></span></p>
+         <%}%>
+       <br>
+      <% }) %> 
     </div>
 
     <a href="/" class="link-game">Rejouer</a>
-    
+
 
   </div>
 

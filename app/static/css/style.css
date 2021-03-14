@@ -20,9 +20,9 @@ body {
 }
 
 main {
-    height: 50%;
+    height: auto;
     align-self: center;
-    width: 30%;
+    width: 40%;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -56,26 +56,29 @@ main {
 
 .link-game{
     transition: 0.4s;
-    color: #0004fa;
+    color: #000000;
     font-size: 20px;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
+    margin-top: 20px;
 }
 
 .link-game:hover {
     background-color: #ffffff;
-    color: #fc634f;
+    color: #03e629;
     padding: 5px 30px 5px 30px;
     transition: padding 0.35s, color 0.35s;
   }
 
 .game-board {
-  height: 300px;
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 
 }
 
@@ -112,7 +115,8 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 200px;
+  height: auto;
+  width: 100%;
 
 }
   
@@ -121,7 +125,16 @@ main {
     margin-right: 1em;
 
 } */
-
+.ok{
+  color: green;
+  font-weight: bold;
+  text-shadow: none;
+}
+.ko{
+  color: red;
+  font-weight: bold;
+  text-shadow: none;
+}
 
    
 

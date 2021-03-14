@@ -17,8 +17,11 @@ Jeu des capitales
 -Afficher  les détails de la partie qui vient d'être jouée (encore des variable de session)
 -Résoudre le problème de nouvelle partie (créer un bouton nouvelle partie dans scorePage et en passant par l'accueil)
 -Trouver un maoyen de faire un seul array a la place des trouze en place
-
-## A faire
 - supprimer les trouze array inutiles
 - modifier la vue gameScore pour afficher les réponses avec des couleurs differentes pour les bonnes et les mauvaises réponses
 - faire des tests en supprimant les arrays de index.js
+
+## A faire
+- Créer une table de best scores
+- Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
+- refaire le design (le design est plus que bof et le css ca va pas du tout)
