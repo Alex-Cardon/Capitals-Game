@@ -168,6 +168,7 @@ main {
   animation: 15s linear 1s 1   slidein;
 	
 }
+
 #progressContainer {
 	width:90%;
 	margin:0 auto;
@@ -177,7 +178,6 @@ main {
 	border-radius:4px;
 	background:white;
 }
-
 
 
 @keyframes slideLtR {
