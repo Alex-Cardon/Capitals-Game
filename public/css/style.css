@@ -17,6 +17,11 @@ body {
     flex-direction: column;
     justify-content: space-around; 
 }
+
+.header {
+  border-bottom-left-radius: 60% 40%;
+  border-bottom-right-radius: 60% 40%;
+}
 h1 {
   color:#01031C;
   font-size: 3rem;
