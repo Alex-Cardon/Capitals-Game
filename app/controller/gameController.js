@@ -6,7 +6,7 @@ exports.gameInit = (req, res) => {
         else {
             req.session.gameArray.push(country)
             res.render('game', {
-                gameArr: req.session.gameArray[0],
+                gameArray: req.session.gameArray[0],
                 count: req.session.count
             });
         }
@@ -26,13 +26,13 @@ exports.gameTest = (req, res) => {
         req.session.score++;
         if (req.session.count < 10) {
             res.render('game', {
-                gameArr: req.session.gameArray[0],
+                gameArray: req.session.gameArray[0],
                 count: req.session.count
             })
         } else {
             res.render('gamescore', {
                 score: req.session.score,
-                gameArr: req.session.gameArray[0],
+                gameArray: req.session.gameArray[0],
             })
         }
     } else {
@@ -40,13 +40,13 @@ exports.gameTest = (req, res) => {
         req.session.count++;
         if (req.session.count < 10) {
             res.render('game', {
-                gameArr: req.session.gameArray[0],
+                gameArray: req.session.gameArray[0],
                 count: req.session.count
             })
         } else {
             res.render('gamescore', {
                 score: req.session.score,
-                gameArr: req.session.gameArray[0],
+                gameArray: req.session.gameArray[0],
             })
         }
     }

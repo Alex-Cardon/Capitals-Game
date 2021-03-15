@@ -10,7 +10,7 @@
     <p class="score">Votre score est de <%=score%>/10</p>
 
     <div class="result">
-      <% gameArr.forEach(elem => { %>
+      <% gameArray.forEach(elem => { %>
        <p><%=elem.name%> - <%=elem.capital%> - 
         <% if (elem.capital.toLowerCase()===elem.user) { %>
           <span class="ok"><%=elem.user%></span></p>
