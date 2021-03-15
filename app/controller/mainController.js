@@ -8,3 +8,7 @@ exports.home = (req, res) => {
 exports.notFound = (req, res) => {
     res.status(404).render('error');
 }
+
+exports.leaderBoard = (req, res) => {
+    res.render('leaderBoard', {})
+}
