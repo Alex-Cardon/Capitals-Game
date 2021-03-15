@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS "capitals";
+DROP TABLE IF EXISTS "leaderboard";
 
 DROP TABLE IF EXISTS "country";
 
@@ -207,9 +207,10 @@ INSERT INTO country (name, capital)  VALUES
  ('Zambie', 'Lusaka'),
  ('Zimbabwé', 'Hararé');
 
-
-
-
+CREATE TABLE If NOT EXISTS "leaderboard" (
+    "score" INT,
+    "name" VARCHAR(5)
+);
 
 
 

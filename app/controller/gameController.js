@@ -44,6 +44,7 @@ exports.gameTest = (req, res) => {
                 count: req.session.count
             })
         } else {
+            console.log(req.session);
             res.render('gamescore', {
                 score: req.session.score,
                 gameArr: req.session.gameArray[0],
@@ -51,3 +52,5 @@ exports.gameTest = (req, res) => {
         }
     }
 }
+
+exports.
