@@ -1,5 +1,5 @@
 {
-  "name": "Capitals-Game",
+  "name": "y",
   "version": "1.0.0",
   "description": "Jeu des capitales",
   "main": "index.js",
@@ -26,5 +26,6 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "pg": "^8.5.1"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,6 +1,6 @@
 body {
     background-color: #ccc;
-
+    color: #01031C;
     height : 100vh;
     background-image: url('../images/world-140304_1920.jpg');
     display: flex;
@@ -13,12 +13,16 @@ body {
     font-size: 1.5em;  
     text-align: center;
     background-color: rgba(207, 225, 245, 0.459);
-    height: 100px;
     display: flex; 
     flex-direction: column;
     justify-content: space-around; 
 }
-
+h1 {
+  color:#01031C;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.7rem;
+}
 main {
     height: auto;
     align-self: center;
@@ -34,7 +38,6 @@ main {
     animation: slideLtR 1s 0s 1 ease;
     
     text-align: center;
-    text-shadow: black 2px 2px 2px;
 }
 
 .link-menu {
@@ -58,9 +61,9 @@ main {
 }
 
 .rules, .main-text {
-    color : rgb(255, 255, 255);    
     font-size: 1.5em;
-    line-height: 50px;
+    margin: 0.7rem;
+    line-height: 2rem;
 }
 
 .link-game:link {
@@ -103,13 +106,13 @@ main {
   color : rgb(255, 255, 255);    
     font-size: 1.8em;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 2rem;
 }
 
 .country-name {
   color : rgb(255, 255, 255);    
     font-size: 2.1em;
-    line-height: 50px;
+    line-height: 2rem;
 }
 
 #answer {
@@ -142,7 +145,6 @@ main {
 .true{
   color: black;
   font-weight: bold;
-  text-shadow: none;
   line-height: 1.5em;
   background-color: rgba(0, 128, 0, 0.199);
   border-bottom: 1px solid black;
@@ -150,13 +152,17 @@ main {
 .false{
   color: black;
   font-weight: bold;
-  text-shadow: none;
   line-height: 1.5em;
   background-color: rgba(255, 0, 0, 0.205);
   border-bottom: 1px solid black;
 }
 
-   
+.center-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 #progress {
 	height:100%;
