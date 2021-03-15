@@ -23,9 +23,10 @@ Jeu des capitales
 - Implémenter un système de timer pour chaque question (dans les 10 sec + || -)
 - Formulaire d'ajout de nom fait
 - Créer une table de best scores (leader bord)
+- Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
+- Implementé le nom rentrer dans le score final 
 
 ## A faire
-- Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
 - Refaire le design (le design est plus que bof et le css ca va pas du tout)
 - Mettre en ligne (faut pas déconner, une telle merveille ne peut rester cachée aux yeux du monde)
-- Implementé le nom rentrer dans le score final 
+- Mettre un bouton pour refresh le leaderboard
