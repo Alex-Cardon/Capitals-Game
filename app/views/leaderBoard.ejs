@@ -1,17 +1,19 @@
 <%- include('partials/header') %>
 
-
-<table>
-  <tbody>
-    <tr>
-    	<th>Username</th>
-    	<th>Points</th>
-    </tr>
-    <tr>
-      <td><%=names%> </td>
-      <td><%=scores%> </td>
-	</tr>
+<table class="result">
+<thead>
+  <tr>
+    <th class="score" colspan="3">Leaderboard</th>
+  </tr>
+</thead>
+<tbody>
+  <% names.forEach(elem => { %>
+  <tr>
+    <td><%=elem.name%></td>
+    <td><%=elem.score%></td>
+  </tr>
+    <% }) %> 
   </tbody>
-</table>
+    </table>
 
 <%- include('partials/footer') %>
