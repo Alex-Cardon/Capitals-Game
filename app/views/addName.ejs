@@ -3,6 +3,7 @@
 <form action="/game/addName" method="get">
     <label for="name">  <% if(name) {%> 
       <p>Votre nom <%= name %> est ajouté</p>
+      <p>Votre score est de  <%= score %> </p>
     <% } %> </label>
     <br> 
     <input type="text" name="name" id="name" autofocus >
