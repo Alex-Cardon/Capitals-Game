@@ -16,13 +16,13 @@
       <tbody>
         <% gameArray.forEach(elem => { %>
           <% if (elem.capital.toLowerCase()===elem.user) { %>
-        <tr class="ok">
+        <tr class="true">
           <td><%=elem.name%></td>
           <td><%=elem.capital%></td>
           <td><%=elem.user%></td>
         </tr>
         <% } else {%>
-          <tr class="ko">
+          <tr class="false">
             <td><%=elem.name%></td>
             <td><%=elem.capital%></td>
             <td><%=elem.user%></td>
