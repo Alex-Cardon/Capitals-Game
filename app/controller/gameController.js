@@ -21,7 +21,6 @@ exports.gameTest = (req, res) => {
     currentCountry.user = userAnswer;
 
     if (currentCountry.capital.toLowerCase() === userAnswer) {
-        console.log('Correct');
         req.session.count++;
         req.session.score++;
         if (req.session.count < 10) {
@@ -36,7 +35,6 @@ exports.gameTest = (req, res) => {
             })
         }
     } else {
-        console.log('faux');
         req.session.count++;
         if (req.session.count < 10) {
             res.render('game', {

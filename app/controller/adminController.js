@@ -10,7 +10,7 @@ exports.addName = ((req, res) => {
     })
 })
 exports.addNameForm = (req, res) => {
-    res.render('addNameForm');
+    res.render('addNameForm', {name: req.query.name});
 }
 
 exports.leaderboard = ((req, res) => {
