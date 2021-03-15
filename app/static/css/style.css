@@ -37,8 +37,25 @@ main {
     text-shadow: black 2px 2px 2px;
 }
 
+.link-menu {
+  display: inline-block;
+  color: rgb(198, 208, 252);
+  text-decoration: none;
+}
 
+.link-menu::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(198, 208, 252);
+  transition: width .5s;
+}
 
+.link-menu:hover::after {
+  width: 100%;
+  transition: width .5s;
+}
 
 .rules, .main-text {
     color : rgb(255, 255, 255);    
