@@ -4,9 +4,8 @@
   <div class="game-board">
 
     <li>
-      <a href="/game/addNameForm" class="link-menu">Ajoutez votre nom au Leaderboard</a>
     </li>
-
+    
     <table class="result">
       <thead>
         <tr>
@@ -16,22 +15,23 @@
       <tbody>
         <% gameArray.forEach(elem => { %>
           <% if (elem.capital.toLowerCase()===elem.user) { %>
-        <tr class="true">
-          <td><%=elem.name%></td>
-          <td><%=elem.capital%></td>
-          <td><%=elem.user%></td>
-        </tr>
-        <% } else {%>
-          <tr class="false">
-            <td><%=elem.name%></td>
-            <td><%=elem.capital%></td>
-            <td><%=elem.user%></td>
-          </tr>
-          <%}%>
-          <% }) %> 
-        </tbody>
+            <tr class="true">
+              <td><%=elem.name%></td>
+              <td><%=elem.capital%></td>
+              <td><%=elem.user%></td>
+            </tr>
+            <% } else {%>
+              <tr class="false">
+                <td><%=elem.name%></td>
+                <td><%=elem.capital%></td>
+                <td><%=elem.user%></td>
+              </tr>
+              <%}%>
+              <% }) %> 
+            </tbody>
           </table>
-
+          
+          <a href="/game/addNameForm" class="link-menu">Ajoutez votre nom au Leaderboard</a>
     <a href="/" class="link-game">Rejouer</a>
 
 
