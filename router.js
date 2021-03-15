@@ -12,7 +12,7 @@ router.get('/game', gameController.gameInit);
 
 router.get('/game/test', gameController.gameTest);
 
-router.get('/game/addName', adminController.showAddNameForm)
+router.get('/game/addNameForm', adminController.addNameForm)
 
 router.get('/leaderboard', adminController.leaderboard)
 

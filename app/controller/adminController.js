@@ -1,21 +1,24 @@
 const dataMapper = require('../dataMapper')
 
-exports.showAddNameForm = ((req, res) => {
-    dataMapper.addName(req.query.name, req.session.score, (error, name) => {
+exports.addName = ((req, res) => {
+    dataMapper.addName(req.query.name, req.session.score, (error, _) => {
         if(error) console.log(error);
         else {
             req.session.name = req.query.name;
-            res.render('addName', {name : req.session.name, score: req.session.score})
-        }
+            res.redirect('/leaderBoard')
+         }
     })
 })
+exports.addNameForm = (req, res) => {
+    res.render('addNameForm');
+}
 
 exports.leaderboard = ((req, res) => {
-    dataMapper.leaderboard(req.session.name, req.session.score, (error) => {
+    dataMapper.leaderboard(req.session.name, req.session.score, (error, names) => {
         if(error) console.log(error);
         else {
             console.log(req.session.name);
-            res.render('leaderBoard', {names : req.session.name, scores: req.session.score})
+            res.render('leaderBoard', {names})
         }
     })
 })
