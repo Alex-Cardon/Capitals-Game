@@ -1,10 +1,11 @@
 <%- include('partials/header') %>
 
-<form action="/game/addNameForm" method="get">
+<form action="/game/addName" method="get">
     <label for="name">  
       <% if(name) {%> 
       <p>Votre nom <%= name %> est ajouté</p>
-    <% } %> </label>
+      <% } %> 
+    </label>
     <br> 
     <input type="text" name="name" id="name" autofocus >
   </form>
