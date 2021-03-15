@@ -15,9 +15,9 @@ exports.gameInit = (req, res) => {
 
 exports.gameTest = (req, res) => {
 
-    const gameArr = req.session.gameArray[0];
+    const gameArray = req.session.gameArray[0];
     const userAnswer = req.query.answer.toLowerCase();
-    const currentCountry = gameArr[req.session.count];
+    const currentCountry = gameArray[req.session.count];
     currentCountry.user = userAnswer;
 
     if (currentCountry.capital.toLowerCase() === userAnswer) {

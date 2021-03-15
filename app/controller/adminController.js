@@ -11,10 +11,11 @@ exports.showAddNameForm = ((req, res) => {
 })
 
 exports.leaderboard = ((req, res) => {
-    dataMapper.leaderboard(req.session.name, req.session.score, (error, name, score) => {
+    dataMapper.leaderboard(req.session.name, req.session.score, (error) => {
         if(error) console.log(error);
         else {
-            res.render('leaderBoard', {name : req.session.name, score: req.session.score})
+            console.log(req.session.name);
+            res.render('leaderBoard', {names : req.session.name, scores: req.session.score})
         }
     })
 })
