@@ -12,8 +12,8 @@ exports.addName = (name, score,callback) => {
     })
 }
 
-exports.leaderboard = (name, score,callback) => {
-    client.query(`SELECT * FROM leaderboard WHERE name = $1 AND score = $2`, [name, score], (error, result) => {
+exports.leaderboard = (names, scores,callback) => {
+    client.query(`SELECT * FROM leaderboard WHERE name = $1 AND score = $2`, [names, scores], (error, result) => {
         callback(error, result.rows);
     })
 }
