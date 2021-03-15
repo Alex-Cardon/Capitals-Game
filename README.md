@@ -20,10 +20,10 @@ Jeu des capitales
 - supprimer les trouze array inutiles
 - modifier la vue gameScore pour afficher les réponses avec des couleurs differentes pour les bonnes et les mauvaises réponses
 - faire des tests en supprimant les arrays de index.js
+- Implémenter un système de timer pour chaque question (dans les 10 sec + || -)
 
 ## A faire
 - Créer une table de best scores (leader bord)
 - Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
-- Implémenter un système de timer pour chaque question (dans les 10 sec + || -)
 - Refaire le design (le design est plus que bof et le css ca va pas du tout)
 - Mettre en ligne (faut pas déconner, une telle merveille ne peut rester cachée aux yeux du monde)

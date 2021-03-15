@@ -139,7 +139,27 @@ main {
 
    
 
-
+#progress {
+	height:100%;
+	text-align:right;
+	font:bold 12px arial;
+	border-right:1px silver solid;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	line-height:30px;
+	color:#444;
+  animation: 15s linear 1s 1   slidein;
+	
+}
+#progressContainer {
+	width:90%;
+	margin:0 auto;
+  margin-top: 20px;
+	height:30px;
+	border:1px silver solid;
+	border-radius:4px;
+	background:white;
+}
 
 
 
@@ -163,4 +183,10 @@ main {
       transform: translateX(500%);
       opacity: 0;
     }
+  }
+
+  @keyframes slidein {
+    100% { transform: scaleX(0); background:red;}
+    50%  { background:orange;}
+    0%   { transform: scaleX(1); background:green;}
   }
