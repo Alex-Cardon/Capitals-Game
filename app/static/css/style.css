@@ -116,7 +116,8 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   height: auto;
-  width: 100%;
+  width: auto;
+  align-items: flex-start;
 
 }
   
