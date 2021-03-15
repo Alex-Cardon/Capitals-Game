@@ -14,7 +14,7 @@ exports.addNameForm = (req, res) => {
 }
 
 exports.leaderboard = ((req, res) => {
-    dataMapper.leaderboard(req.session.name, req.session.score, (error, names) => {
+    dataMapper.leaderboard((error, names) => {
         if(error) console.log(error);
         else {
             console.log(req.session.name);
