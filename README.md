@@ -21,6 +21,7 @@ Jeu des capitales
 - modifier la vue gameScore pour afficher les réponses avec des couleurs differentes pour les bonnes et les mauvaises réponses
 - faire des tests en supprimant les arrays de index.js
 - Implémenter un système de timer pour chaque question (dans les 10 sec + || -)
+- Formulaire d'ajout de nom fait
 
 ## A faire
 - Créer une table de best scores (leader bord)
