@@ -14,6 +14,8 @@ router.get('/game/test', gameController.gameTest);
 
 router.get('/game/addNameForm', adminController.addNameForm)
 
+router.get('/game/addName', adminController.addName)
+
 router.get('/leaderboard', adminController.leaderboard)
 
 module.exports = router;

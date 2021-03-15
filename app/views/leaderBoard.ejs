@@ -7,10 +7,14 @@
   </tr>
 </thead>
 <tbody>
-  <% names.forEach(elem => { %>
+  <% namesScore.forEach(elem => { %>
   <tr>
     <td><%=elem.name%></td>
+    <% if(elem.score===null) {%>
+    <td>0</td>
+  <%} else {%>
     <td><%=elem.score%></td>
+    <% } %> 
   </tr>
     <% }) %> 
   </tbody>

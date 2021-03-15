@@ -146,19 +146,15 @@ main {
 
 }
   
-/* nav ul li {
-    display: inline;
-    margin-right: 1em;
 
-} */
-.ok{
+.true{
   color: black;
   font-weight: bold;
   line-height: 1.5em;
   background-color: rgba(0, 128, 0, 0.199);
   border-bottom: 1px solid black;
 }
-.ko{
+.false{
   color: black;
   font-weight: bold;
   line-height: 1.5em;
