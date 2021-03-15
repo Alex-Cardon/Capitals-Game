@@ -192,6 +192,28 @@ main {
 	background:white;
 }
 
+.leaderboard{
+  color: #ffffff;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+  align-items: center;
+}
+
+.leaderboard tbody {
+  width: 100%;
+}
+
+.leaderboard tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  line-height: 1.5em;
+}
 
 @keyframes slideLtR {
     0% {
