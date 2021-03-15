@@ -209,7 +209,7 @@ INSERT INTO country (name, capital)  VALUES
 
 CREATE TABLE If NOT EXISTS "leaderboard" (
     "score" INT,
-    "name" VARCHAR(5)
+    "name" VARCHAR(10)
 );
 
 

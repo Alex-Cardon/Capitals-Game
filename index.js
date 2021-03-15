@@ -13,6 +13,9 @@ app.set('views', './app/views');
 
 app.use(express.static('./app/static'));
 
+
+
+
 const session = require('express-session');
 app.use(session({
   secret: process.env.SECRET_SESSION,

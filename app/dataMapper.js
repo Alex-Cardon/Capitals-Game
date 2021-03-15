@@ -6,8 +6,8 @@ exports.getCountryName = (callback) => {
     });
 }
 
-exports.addName = (nameInfo,callback) => {
-    client.query(`INSERT INTO "leaderboard"("name") VALUES ($1)`, [nameInfo.name],  (error, result) => {
+exports.addName = (name,callback) => {
+    client.query(`INSERT INTO "leaderboard"("name") VALUES ($1)`, [name],  (error, result) => {
         callback(error, result);
     })
 }
