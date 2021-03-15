@@ -1,21 +1,21 @@
 <%- include('partials/header') %>
 
-<script src="config.js"></script>
 
-  <div class="game-board">
-    <p class="country-title"> Pays : </p>
-    <p class="country-name"><%=gameArr[count].name%></p>
-   
-    
-    <form action="/game/test" method="get">
-      <label for="answer"></label>
-      <input type="text" name="answer" id="answer" autofocus >
-    </form>
-
-    <div id="progressContainer">
-      <div id="progress"></div>
+<div class="game-board">
+  <p class="country-title"> Pays : </p>
+  <p class="country-name"><%=gameArr[count].name%></p>
+  
+  
+  <form id="myForm" action="/game/test" method="get">
+    <label for="answer"></label>
+    <input type="text" name="answer" id="answer" autofocus >
+  </form>
+  <script src="../../config.js"></script>
+  
+  <div id="progressContainer">
+    <div id="progress"></div>
   </div>
-
-  </div>
+  
+</div>
 
 <%- include('partials/footer') %>
