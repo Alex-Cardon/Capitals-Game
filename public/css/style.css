@@ -144,14 +144,20 @@ main {
 
 } */
 .ok{
-  color: green;
+  color: black;
   font-weight: bold;
   text-shadow: none;
+  line-height: 1.5em;
+  background-color: rgba(0, 128, 0, 0.199);
+  border-bottom: 1px solid black;
 }
 .ko{
-  color: red;
+  color: black;
   font-weight: bold;
   text-shadow: none;
+  line-height: 1.5em;
+  background-color: rgba(255, 0, 0, 0.205);
+  border-bottom: 1px solid black;
 }
 
    

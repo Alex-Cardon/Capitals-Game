@@ -4,22 +4,33 @@
   <div class="game-board">
 
     <li>
-      <a href="/game/addName" class="link-menu">Ajoutez votre nom</a>
+      <a href="/game/addName" class="link-menu">Ajoutez votre nom au Leaderboard</a>
     </li>
-  
-    <p class="score">Votre score est de <%=score%>/10</p>
 
-    <div class="result">
-      <% gameArr.forEach(elem => { %>
-       <p><%=elem.name%> - <%=elem.capital%> - 
-        <% if (elem.capital.toLowerCase()===elem.user) { %>
-          <span class="ok"><%=elem.user%></span></p>
-          <% } else {%>
-            <span class="ko"><%=elem.user%></span></p>
-         <%}%>
-       <br>
-      <% }) %> 
-    </div>
+    <table class="result">
+      <thead>
+        <tr>
+          <th class="score" colspan="3">Votre score est de <%=score%>/10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% gameArr.forEach(elem => { %>
+          <% if (elem.capital.toLowerCase()===elem.user) { %>
+        <tr class="ok">
+          <td><%=elem.name%></td>
+          <td><%=elem.capital%></td>
+          <td><%=elem.user%></td>
+        </tr>
+        <% } else {%>
+          <tr class="ko">
+            <td><%=elem.name%></td>
+            <td><%=elem.capital%></td>
+            <td><%=elem.user%></td>
+          </tr>
+          <%}%>
+          <% }) %> 
+        </tbody>
+          </table>
 
     <a href="/" class="link-game">Rejouer</a>
 
