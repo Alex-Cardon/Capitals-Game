@@ -22,7 +22,7 @@ Jeu des capitales
 - faire des tests en supprimant les arrays de index.js
 
 ## A faire
-- Créer une table de best scores
+- Créer une table de best scores (leader bord)
 - Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
 - Implémenter un système de timer pour chaque question (dans les 10 sec + || -)
 - Refaire le design (le design est plus que bof et le css ca va pas du tout)
