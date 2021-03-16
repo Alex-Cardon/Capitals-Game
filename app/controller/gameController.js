@@ -1,4 +1,5 @@
 const dataMapper = require('../dataMapper')
+const stringSimilarity = require('string-similarity');
 
 exports.gameInit = (req, res) => {
     dataMapper.getCountryName((error, country) => {
@@ -19,11 +20,14 @@ exports.gameTest = (req, res) => {
     const userAnswer = req.query.answer.toLowerCase();
     const currentCountry = gameArray[req.session.count];
     currentCountry.user = userAnswer;
-
-    if (currentCountry.capital.toLowerCase() === userAnswer) {
+    const dataCountry = currentCountry.capital.toLowerCase();
+    const similarity = stringSimilarity.compareTwoStrings(dataCountry, userAnswer)
+    console.log(similarity);
+    if (similarity >= 0.5) {
         req.session.count++;
         req.session.score++;
         if (req.session.count < 10) {
+            currentCountry.test = true;
             res.render('game', {
                 gameArray: req.session.gameArray[0],
                 count: req.session.count
@@ -37,6 +41,7 @@ exports.gameTest = (req, res) => {
     } else {
         req.session.count++;
         if (req.session.count < 10) {
+            currentCountry.test = true;
             res.render('game', {
                 gameArray: req.session.gameArray[0],
                 count: req.session.count

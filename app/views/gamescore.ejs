@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <% gameArray.forEach(elem => { %>
-          <% if (elem.capital.toLowerCase()===elem.user) { %>
+          <% if (elem.test) { %>
             <tr class="true">
               <td><%=elem.name%></td>
               <td><%=elem.capital%></td>

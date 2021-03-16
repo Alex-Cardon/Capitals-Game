@@ -32,3 +32,4 @@ Jeu des capitales
 - Mettre en ligne (faut pas déconner, une telle merveille ne peut rester cachée aux yeux du monde)
 - Mettre en place un système de tolérence 
 - Faire un systeme de login 
+- Rendre l'appli responsive
