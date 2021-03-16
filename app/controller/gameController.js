@@ -2,9 +2,11 @@ const dataMapper = require('../dataMapper')
 const stringSimilarity = require('string-similarity');
 
 exports.gameInit = (req, res) => {
+    console.log("Database_URL 01", process.env.DATABASE_URL);
     dataMapper.getCountryName((error, country) => {
         if (error) res.status(500).send("Erreur serveur !");
         else {
+            console.log("Database_URL 02", process.env.DATABASE_URL);
             req.session.gameArray.push(country)
             res.render('game', {
                 gameArray: req.session.gameArray[0],
