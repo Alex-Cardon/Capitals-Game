@@ -20,8 +20,9 @@ exports.gameTest = (req, res) => {
     const userAnswer = req.query.answer.toLowerCase();
     const currentCountry = gameArray[req.session.count];
     currentCountry.user = userAnswer;
-    const dataCountry = currentCountry.capital.toLowerCase();
+    const dataCountry = currentCountry.capital.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const similarity = stringSimilarity.compareTwoStrings(dataCountry, userAnswer)
+
     console.log(similarity);
     if (similarity >= 0.5) {
         req.session.count++;
@@ -41,7 +42,7 @@ exports.gameTest = (req, res) => {
     } else {
         req.session.count++;
         if (req.session.count < 10) {
-            currentCountry.test = true;
+            currentCountry.test = false;
             res.render('game', {
                 gameArray: req.session.gameArray[0],
                 count: req.session.count
