@@ -25,7 +25,7 @@ app.use(session({
   saveUninitialized:true
 }));
 
-
+console.log("Database_URL", process.env.DATABASE_URL);
 app.use(router);
 app.use(mainController.notFound);
 app.listen(process.env.PORT);
