@@ -148,6 +148,7 @@ main {
   width: 80%;
 }
 
+
 .result tr {
   width: 100%;
   display: flex;
@@ -155,8 +156,14 @@ main {
   flex-direction: row;
   line-height: 1.5em;
 }
-.result tbody {
-  width: 80%;
+.result tbody,thead {
+  width: 100%;
+}
+.result th {
+  font-size: 1.3rem;
+}
+.result td,th {
+  width: 30%;
 }
   
 
