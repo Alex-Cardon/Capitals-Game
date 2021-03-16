@@ -7,6 +7,8 @@ const app = express();
 
 const router = require('./router');
 
+const mainController = require('./app/controller/mainController');
+
 app.set('view engine', 'ejs');
 
 app.set('views', './app/views');
@@ -25,5 +27,5 @@ app.use(session({
 
 
 app.use(router);
-
+app.use(mainController.notFound);
 app.listen(process.env.PORT);

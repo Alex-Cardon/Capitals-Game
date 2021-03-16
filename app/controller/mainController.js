@@ -6,7 +6,7 @@ exports.home = (req, res) => {
 }
 
 exports.notFound = (req, res) => {
-    res.status(404).render('error');
+    res.status(404).render('error', {cssFile:'error404.css'});
 }
 
 exports.leaderBoard = (req, res) => {

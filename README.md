@@ -26,10 +26,13 @@ Jeu des capitales
 - Implémenter un système de best score (table dans la bdd, form pour le nom du user, requête sql qui va bien, page de best score...)
 - Implementé le nom rentrer dans le score final 
 - Mettre un bouton pour refresh le leaderboard
+- Mettre en place un système de tolérence 
 
 ## A faire
-- Refaire le design (le design est plus que bof et le css ca va pas du tout)
 - Mettre en ligne (faut pas déconner, une telle merveille ne peut rester cachée aux yeux du monde)
-- Mettre en place un système de tolérence 
-- Faire un systeme de login 
+- Faire un systeme de login (version V2)
+
+
+## En cours
+- Refaire le design (le design est plus que bof et le css ca va pas du tout)
 - Rendre l'appli responsive
