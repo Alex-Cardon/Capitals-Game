@@ -17,3 +17,9 @@ exports.leaderboard = (callback) => {
         callback(error, result.rows);
     })
 }
+
+exports.delete = (callback) => {
+    client.query(`DELETE FROM leaderboard`, (error, result) => {
+        callback(error, result)
+    })
+}

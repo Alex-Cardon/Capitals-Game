@@ -23,3 +23,11 @@ exports.leaderboard = ((req, res) => {
     })
 })
 
+exports.deleteLeaderboard = ((req, res) => {
+    dataMapper.delete((error, result) => {
+        if(error) console.log(error);
+        else{
+            res.redirect('/leaderboard')
+        }
+    })
+})
