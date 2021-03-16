@@ -49,8 +49,9 @@ main {
   display: inline-block;
   color: rgb(198, 208, 252);
   text-decoration: none;
+  font-size: 1.5em;
+  margin: 10px;
 }
-
 .link-menu::after {
   content: '';
   display: block;
@@ -121,6 +122,7 @@ main {
 }
 
 #answer {
+  margin: 10px;
   height: 50px;
   font-size: 1.5em;
   text-align: center;
@@ -142,8 +144,19 @@ main {
   flex-wrap: wrap;
   height: auto;
   width: auto;
-  align-items: flex-start;
+  align-items: center;
+  width: 80%;
+}
 
+.result tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 1.5em;
+}
+.result tbody {
+  width: 80%;
 }
   
 
@@ -210,9 +223,10 @@ main {
 .leaderboard tr {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   line-height: 1.5em;
+  color: #01031C;
 }
 
 @keyframes slideLtR {

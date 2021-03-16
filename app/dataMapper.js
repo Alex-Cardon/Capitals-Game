@@ -13,7 +13,7 @@ exports.addName = (name, score, callback) => {
 }
 
 exports.leaderboard = (callback) => {
-    client.query(`SELECT * FROM leaderboard LIMIT 10`,(error, result) => {
+    client.query(`SELECT * FROM leaderboard ORDER BY score DESC LIMIT 10`,(error, result) => {
         callback(error, result.rows);
     })
 }
