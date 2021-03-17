@@ -12,18 +12,39 @@ body {
     padding: 20px;
     font-size: 1.5em;  
     text-align: center;
-    background-color: rgba(207, 225, 245, 0.459);
+    background-color: rgba(77, 89, 255, 0.164);
     display: flex; 
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-between; 
 }
-
+.footer {
+  color:rgb(198, 208, 252)
+}
 .header {
-  border-bottom-left-radius: 60% 40%;
-  border-bottom-right-radius: 60% 40%;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  box-shadow: -1px 1px 26px 0px rgba(77, 89, 255, 0.459);
 }
-h1 {
-  color:#01031C;
+.nav-logo {
+  display: flex;
+}
+.nav-logo h1 {
+  text-shadow: 2px 2px black;
+}
+.nav-link {
+  display: flex;
+  justify-content: end;
+}
+.nav-link li {
+  margin: 0 1rem;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.header h1 {
+  color: #d4b229;
   font-size: 3rem;
   font-weight: bold;
   margin: 0.7rem;
@@ -35,9 +56,9 @@ main {
     display:flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.616);
+    background-color: rgba(165, 195, 250, 0.616);
     padding: 2em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -5px 25px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     
     animation: slideLtR 1s 0s 1 ease;
@@ -220,11 +241,24 @@ main {
   flex-wrap: wrap;
   height: auto;
   width: auto;
+  padding: 1rem;
   align-items: center;
+  width: 60%;
+}
+.leaderboard th{
+  width:100%;
+  text-align: center;
 }
 
 .leaderboard tbody {
   width: 100%;
+  padding: 1rem;
+}
+.leaderboard-table tr:nth-child(2n) {
+background-color: rgb(165, 195, 250);
+}
+.leaderboard-table tr {
+  padding: 0.5rem 1rem;
 }
 
 .leaderboard tr {
@@ -234,6 +268,52 @@ main {
   flex-direction: row;
   line-height: 1.5em;
   color: #01031C;
+}
+
+.leaderboard-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #01031C;
+  margin: 0 1rem;
+}
+
+.leaderboard-form input{
+  border: none;
+  font-size: 1.5rem;
+  width: 40%;
+  background-color: rgb(165, 195, 250);
+  border-bottom: 3px solid  transparent;
+  padding: 5px 10px;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  transition: all 0.5s;
+}
+.leaderboard-form input:focus{
+  border:none;
+  outline:none;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  border-bottom: 3px solid  #01031C;
+}
+
+button {
+  width: 25%;
+  line-height: 1.7rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border:1px solid transparent;
+  color: #01031C;
+  background-color: rgb(165, 195, 250);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  border:1px solid transparent;
+  color: rgb(165, 195, 250);
+  background-color: #01031C;
+  border:1px solid rgb(165, 195, 250);
 }
 
 @keyframes slideLtR {
