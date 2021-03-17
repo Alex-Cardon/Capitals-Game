@@ -1,7 +1,7 @@
 const {Client} = require('pg');
 
 const client = new Client(process.env.PG_URI
- /*   {
+{
     user: "nxicoqaqblguek",
     password: "8d5b7376f4d846e9b56abc4709a64f767bb01b7a37062c467e9a0f5027ae1ae9",
     database: "d4clsj74l7phsd",
@@ -10,7 +10,7 @@ const client = new Client(process.env.PG_URI
     ssl: { rejectUnauthorized: false }
 
 }
-*/);
+);
 
 client.connect();
 
