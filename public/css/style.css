@@ -363,20 +363,12 @@ button:hover {
 }
 
 main {
-  max-width: 90%;
+  width: 90%;
+  height: 50%;
 }
 
 .link-menu{
   font-size: 1em;
 }
 
-}
-
-
-/* Styles pour les ecrans de moins de 800px */
-
-@media all and (max-width: 800px) {
-  main {
-    width: 100%;
-  }
 }
