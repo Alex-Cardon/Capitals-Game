@@ -1,0 +1,381 @@
+/* $primary: #F9DAAB
+$dark: #E89D2C
+contrast-dark: #00599C
+contrast-light: #2C97E8 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap");
+
+body {
+    background-color: #01031C;
+    color: #EEE;
+    height : 100vh;
+    background-image: url('/images/lightmode.jpg');
+    background-size: cover cover;
+    background-position-y: -1000px;
+    background-position-x: -1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header, .footer {
+    padding: 20px;
+    font-size: 1.5em;  
+    text-align: center;
+    background-color: rgba(0, 88, 156, 0.582);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.footer {
+  color: white;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(232, 157, 44, 0.205);
+  box-shadow: -1px 1px 26px 0px rgba(0, 88, 156, 0.486);
+}
+.nav-logo {
+  display: flex;
+}
+
+.nav-logo h1 {
+  text-shadow: 2px 2px #00599C;
+}
+.nav-link {
+  display: flex;
+  justify-content: end;
+}
+.nav-link li {
+  margin: 0 1rem;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.header h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.7rem;
+}
+main {
+    height: auto;
+    align-self: center;
+    width: 40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 89, 156, 0.616);
+    /* background-color: rgba(44, 151, 232, 0.616); */
+    padding: 2em;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    
+    animation: slideLtR 1s 0s 1 ease;
+    
+    text-align: center;
+}
+/* Gestion du bouton play pour la couleur du text du play*/
+.link {
+
+    margin: 1rem;
+    height: 30px;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+/*  fin gestion bouton play */
+.link-menu {
+  display: inline-block;
+  color: white;
+  /* font-weight: bold; */
+  text-shadow: 1px 1px #00599C;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 10px;
+}
+.link-menu::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  box-shadow: 1px 1px 1px #00599C;
+  transition: width .5s;
+}
+
+.link-menu:hover::after {
+  width: 100%;
+  transition: width .5s;
+}
+.addLeaderBoard .link-menu{
+    color: #E89D2C;
+}
+
+.addLeaderBoard .link-menu::after{
+    background: #E89D2C;
+}
+
+.rules, .main-text {
+    font-size: 1.5em;
+    margin: 0.7rem;
+    line-height: 2rem;
+}
+
+.link-game:link {
+    text-decoration: none;
+    background-color: #ccc;
+    padding: 5px 20px 5px 20px;
+    border: 5px;
+    border-radius: 5px;
+}
+
+.link-game{
+    transition: 0.4s;
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.link-game:hover {
+    background-color: #ffffff;
+    color: #03e629;
+    padding: 5px 30px 5px 30px;
+    transition: padding 0.35s, color 0.35s;
+  }
+
+.game-board {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.country-title {
+  color : rgb(255, 255, 255);    
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.country-name {
+  color : rgb(255, 255, 255);    
+    font-size: 2.1em;
+    line-height: 2rem;
+}
+
+#answer {
+  margin: 10px;
+  height: 50px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.score{
+  color : rgb(255, 255, 255);    
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 50px;
+
+}
+
+.result {
+  color: #ffffff;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+  align-items: center;
+  width: 80%;
+}
+
+
+.result tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 1.5em;
+}
+.result tbody,thead {
+  width: 100%;
+}
+.result th {
+  font-size: 1.3rem;
+}
+.result td,th {
+    color: white;
+  width: 30%;
+}
+  
+
+.true{
+  color: black;
+  font-weight: bold;
+  line-height: 1.5em;
+  background-color: rgba(0, 128, 0, 0.397);
+  border-bottom: 1px solid black;
+}
+.false{
+  color: black;
+  font-weight: bold;
+  line-height: 1.5em;
+  background-color: rgba(255, 0, 0, 0.459);
+  border-bottom: 1px solid black;
+}
+
+.center-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress {
+	height:100%;
+	text-align:right;
+	font:bold 12px arial;
+	border-right:1px silver solid;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	line-height:30px;
+	color:#444;
+  animation: 15s linear 1s 1   slidein;
+	
+}
+
+#progressContainer {
+	width:90%;
+	margin:0 auto;
+  margin-top: 20px;
+	height:10px;
+	border:1px silver solid;
+	border-radius:4px;
+	background:white;
+}
+
+.leaderboard{
+  color: #ffffff;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  align-items: center;
+  width: 60%;
+}
+.leaderboard th{
+  width:100%;
+  text-align: center;
+}
+
+.leaderboard tbody {
+  width: 100%;
+  padding: 1rem;
+}
+.leaderboard-table tr:nth-child(2n) {
+background-color: rgb(165, 195, 250);
+}
+.leaderboard-table tr {
+  padding: 0.5rem 1rem;
+}
+
+.leaderboard tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 1.5em;
+  color: #01031C;
+}
+
+.leaderboard-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #01031C;
+  margin: 0 1rem;
+}
+
+.leaderboard-form input{
+  border: none;
+  font-size: 1.5rem;
+  width: 40%;
+  background-color: rgb(165, 195, 250);
+  border-bottom: 3px solid  transparent;
+  padding: 5px 10px;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  transition: all 0.5s;
+}
+.leaderboard-form input:focus{
+  border:none;
+  outline:none;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  border-bottom: 3px solid  #01031C;
+}
+
+button {
+  width: 25%;
+  line-height: 1.7rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border:1px solid transparent;
+  color: #01031C;
+  background-color: rgb(165, 195, 250);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  border:1px solid transparent;
+  color: rgb(165, 195, 250);
+  background-color: #01031C;
+  border:1px solid rgb(165, 195, 250);
+}
+
+@keyframes slideLtR {
+    0% {
+      transform: translateX(-500%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes slideRtL {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    0% {
+      transform: translateX(500%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slidein {
+    100% { transform: scaleX(0); background:red;}
+    50%  { background:orange;}
+    0%   { transform: scaleX(1); background:green;}
+  }
