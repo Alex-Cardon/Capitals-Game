@@ -12,3 +12,7 @@ exports.notFound = (req, res) => {
 exports.leaderBoard = (req, res) => {
     res.render('leaderBoard', {})
 }
+
+exports.login = (req,res) => {
+    res.render('login');
+}
