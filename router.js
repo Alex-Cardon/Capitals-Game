@@ -8,6 +8,8 @@ const adminController = require('./app/controller/adminController')
 
 router.get('/', mainController.home);
 
+router.get('/login', mainController.login);
+
 router.get('/game', gameController.gameInit);
 
 router.get('/game/test', gameController.gameTest);
