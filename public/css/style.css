@@ -370,5 +370,29 @@ main {
 .link-menu{
   font-size: 1em;
 }
+}
 
+/* Styles pour les ecrans de moins de 600px */
+
+@media all and (max-width: 600px) {
+  .header h1 {
+    display: none;
+  
+  }
+
+  .nav-link li{
+    margin: 0;
+  }
+  
+  .link-menu{
+    font-size: 0.95em;
+  }
+
+  .rules{
+   display: none;
+  }
+  .main-text{
+    font-size: 1.2em;
+    line-height: normal;
+  }
 }
