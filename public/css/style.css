@@ -396,3 +396,16 @@ main {
     line-height: normal;
   }
 }
+
+/* styles formulaires en dessous de 400px */
+
+@media all and (max-width: 400px) {
+  #answer{
+    font-size: 1.2em;
+  }
+
+  .contry-title{
+
+  }
+
+}

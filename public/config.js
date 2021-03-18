@@ -1,2 +1,3 @@
-const test = function () {document.getElementById("myForm").submit()}
+/* const test = function () {document.getElementById("myForm").submit()}
 setInterval(test, 16000);
+ */

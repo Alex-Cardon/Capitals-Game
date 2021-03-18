@@ -1,7 +1,3 @@
-/* $primary: #F9DAAB
-$dark: #E89D2C
-contrast-dark: #00599C
-contrast-light: #2C97E8 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap");
 
 body {
@@ -379,3 +375,66 @@ button:hover {
     50%  { background:orange;}
     0%   { transform: scaleX(1); background:green;}
   }
+
+
+ /* Styles pour les ecrans de moins de 1000px */
+ @media all and (max-width: 1000px) { 
+  .header  {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.header h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#myForm{
+  width: 20%;
+}
+
+main {
+  width: 90%;
+  height: 50%;
+}
+
+.link-menu{
+  font-size: 1em;
+}
+}
+
+/* Styles pour les ecrans de moins de 600px */
+
+@media all and (max-width: 600px) {
+  .header h1 {
+    display: none;
+  
+  }
+
+  .nav-link li{
+    margin: 0;
+  }
+  
+  .link-menu{
+    font-size: 0.95em;
+  }
+
+  .rules{
+   display: none;
+  }
+  .main-text{
+    font-size: 1.2em;
+    line-height: normal;
+  }
+}
+
+
+/* styles formulaires en dessous de 400px */
+
+@media all and (max-width: 400px) {
+  input{
+    font-size: 0.5em;
+  }
+
+}
