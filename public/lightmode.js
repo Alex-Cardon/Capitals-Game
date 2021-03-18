@@ -1,4 +1,7 @@
 function myLightMode() {
+    let styles= document.createElement('link');
+    styles.href="/css/style.css";
+    styles.rel="stylesheet";
     const head = document.head;
     let loader = document.createElement('link');
     loader.href="/css/lightmode.css";
@@ -9,8 +12,10 @@ function myLightMode() {
         element.classList.add("darkmode");
         element.classList.remove("lightmode");
         head.removeChild(head.lastChild);
+        head.appendChild(styles);
     }
     else {
+        head.removeChild(head.lastChild);
         element.classList.add("lightmode");
         element.classList.remove("darkmode");
         head.appendChild(loader);

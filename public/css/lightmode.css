@@ -178,7 +178,7 @@ main {
   height: 50px;
   font-size: 1.5em;
   text-align: center;
-}
+} 
 
 .score{
   color : rgb(255, 255, 255);    
@@ -320,6 +320,8 @@ background-color: rgb(165, 195, 250);
   margin: 0 1rem;
   transition: all 0.5s;
 }
+
+
 .leaderboard-form input:focus{
   border:none;
   outline:none;
@@ -390,10 +392,6 @@ button:hover {
   text-align: center;
 }
 
-#myForm{
-  width: 20%;
-}
-
 main {
   width: 90%;
   height: 50%;
@@ -429,12 +427,10 @@ main {
   }
 }
 
-
 /* styles formulaires en dessous de 400px */
 
 @media all and (max-width: 400px) {
-  input{
-    font-size: 0.5em;
+  #answer{
+    font-size: 1.2em;
   }
-
 }

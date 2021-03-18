@@ -400,12 +400,16 @@ main {
 /* styles formulaires en dessous de 400px */
 
 @media all and (max-width: 400px) {
+
+    main{
+    height: 60%;
+  }  
+
   #answer{
     font-size: 1.2em;
   }
 
-  .contry-title{
-
+  .link-menu{
+    font-size: 0.5em;
   }
-
 }
