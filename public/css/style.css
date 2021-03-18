@@ -321,6 +321,11 @@ button:hover {
   border:1px solid rgb(165, 195, 250);
 }
 
+.link-mail {
+  color: white;
+  text-decoration: none;
+}
+
 @keyframes slideLtR {
     0% {
       transform: translateX(-500%);

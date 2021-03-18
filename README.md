@@ -29,7 +29,7 @@ Jeu des capitales
 
 ### A faire
 - Mettre en ligne (faut pas déconner, une telle merveille ne peut rester cachée aux yeux du monde)
-- Faire un système de login (version V2)
+- Faire un système de login (version V2)  /// en cours de construction par Cédric ///
 
 ### En cours
 - Refaire le design (le design est plus que bof et le css ca va pas du tout)
